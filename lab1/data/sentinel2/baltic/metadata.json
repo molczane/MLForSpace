@@ -1,0 +1,127 @@
+{
+  "aoi": {
+    "id": "baltic",
+    "name": "Baltic Sea (north of Hel)",
+    "terrain": "sea",
+    "longitude": 18.8,
+    "latitude": 54.85
+  },
+  "scene_id": "S2A_T34UCF_20250819T100334_L2A",
+  "acquired_utc": "2025-08-19T10:05:44.653000Z",
+  "retrieved_utc": "2026-10-31T12:30:58.230157+00:00",
+  "configuration": {
+    "catalogue": "https://earth-search.aws.element84.com/v1",
+    "collection": "sentinel-2-c1-l2a",
+    "datetime": "2025-06-01T00:00:00Z/2025-08-31T23:59:59Z",
+    "size_pixels": 512,
+    "resolution_m": 10,
+    "max_scene_cloud_percent": 10,
+    "max_aoi_bad_fraction": 0.001,
+    "display_reflectance_max": 0.3,
+    "display_gamma": 2.2,
+    "aois": [
+      {
+        "id": "krakow",
+        "name": "Kraków",
+        "terrain": "urban",
+        "longitude": 19.9383,
+        "latitude": 50.0614
+      },
+      {
+        "id": "bialowieza",
+        "name": "Puszcza Białowieska",
+        "terrain": "forest",
+        "longitude": 23.835,
+        "latitude": 52.755
+      },
+      {
+        "id": "baltic",
+        "name": "Baltic Sea (north of Hel)",
+        "terrain": "sea",
+        "longitude": 18.8,
+        "latitude": 54.85
+      }
+    ]
+  },
+  "crs": "EPSG:32634",
+  "bounds": [
+    356190.0,
+    6077760.0,
+    361310.0,
+    6082880.0
+  ],
+  "transform": [
+    10.0,
+    0.0,
+    356190.0,
+    0.0,
+    -10.0,
+    6082880.0
+  ],
+  "window": {
+    "col": 5619,
+    "row": 1714,
+    "size": 512
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          18.761331751804512,
+          54.82630430468816
+        ],
+        [
+          18.840969895610225,
+          54.827747347485655
+        ],
+        [
+          18.838512095961846,
+          54.873726238024055
+        ],
+        [
+          18.758783475204947,
+          54.87228074786223
+        ],
+        [
+          18.761331751804512,
+          54.82630430468816
+        ]
+      ]
+    ]
+  },
+  "aoi_bad_fraction": 0.0,
+  "scl_fractions": {
+    "6": 1.0
+  },
+  "conversions": {
+    "red": {
+      "scale": 0.0001,
+      "effective_offset": -0.1,
+      "catalogue_offset": -0.1
+    },
+    "green": {
+      "scale": 0.0001,
+      "effective_offset": -0.1,
+      "catalogue_offset": -0.1
+    },
+    "blue": {
+      "scale": 0.0001,
+      "effective_offset": -0.1,
+      "catalogue_offset": -0.1
+    }
+  },
+  "attempts": [
+    {
+      "scene": "S2A_T34UCF_20250819T100334_L2A",
+      "bad_fraction": 0.0
+    }
+  ],
+  "sha256": {
+    "rgb.png": "3437ed88f5f44edacf5b4299c413b2a47c4cd8eaa68eacd14a43a88224fc833f",
+    "rgb_dn.tif": "4889489fa0abc871d9ef99292ab6cd9f1c804fc69b552605b257598114dd4d5b",
+    "grayscale.png": "333b05977709a0a7e71489860347a8421cb1804fa7d7e78e55e7c7fc0970ba44",
+    "scl.tif": "2886d925d42b497c6b1bc5122cec45529883f80c67ff05adb8c6ca5965690b23",
+    "rgb_reflectance.tif": "761836f09f3906cf29263a52342d3474ed4b927ca07884badfee46bc81be2a9c"
+  }
+}

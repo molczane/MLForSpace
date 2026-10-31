@@ -1,0 +1,35 @@
+# Local Python environments
+.venv/
+venv/
+env/
+
+# Python bytecode, caches, and build artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Jupyter temporary files (keep notebooks and their saved outputs)
+.ipynb_checkpoints/
+
+# Editor and macOS files
+.idea/
+.vscode/
+.DS_Store
+._*
+*.swp
+*.swo
+
+# Local secrets (keep the example configuration)
+.env
+.env.*
+!.env.example
+
+# Keep uv.lock, lab input crops, metadata, figures, and results in Git.

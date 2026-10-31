@@ -1,0 +1,16 @@
+{
+  "catalogue": "https://earth-search.aws.element84.com/v1",
+  "collection": "sentinel-2-c1-l2a",
+  "datetime": "2025-06-01T00:00:00Z/2025-08-31T23:59:59Z",
+  "size_pixels": 512,
+  "resolution_m": 10,
+  "max_scene_cloud_percent": 10,
+  "max_aoi_bad_fraction": 0.001,
+  "display_reflectance_max": 0.3,
+  "display_gamma": 2.2,
+  "aois": [
+    {"id": "krakow", "name": "Kraków", "terrain": "urban", "longitude": 19.9383, "latitude": 50.0614},
+    {"id": "bialowieza", "name": "Puszcza Białowieska", "terrain": "forest", "longitude": 23.835, "latitude": 52.755},
+    {"id": "baltic", "name": "Baltic Sea (north of Hel)", "terrain": "sea", "longitude": 18.8, "latitude": 54.85}
+  ]
+}

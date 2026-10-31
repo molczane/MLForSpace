@@ -1,0 +1,23 @@
+{
+  "krakow": {
+    "accepted_k": 258,
+    "input_sha256": "434d712694fef83a62806d383fdebe73a3a46fc7142dc3c30d7cd3fc62087da3",
+    "review_method": "Assistant inspection of generated full-frame, enlarged central-patch and absolute-error plots; no human participant study.",
+    "visual_review": "The Vistula boundary, street layout and larger building patterns are preserved in the full-frame view. The enlarged central patch remains close to the original, so k=258 is accepted under the stated conservative lab rule.",
+    "remaining_differences": "Slight smoothing and small edge/intensity changes remain on roofs and narrow streets under magnification. Mean absolute error is about 1.80 gray levels; the largest individual error is about 19.92. Rank 257 looks very similar but narrowly misses SSIM 0.99."
+  },
+  "bialowieza": {
+    "accepted_k": 251,
+    "input_sha256": "c6b1743a4c9644f099aa40fee7faf6705326181f88248341229986cacbe0980c",
+    "review_method": "Assistant inspection of generated full-frame, enlarged central-patch and absolute-error plots; no human participant study.",
+    "visual_review": "The river corridor and broad canopy patterns are preserved. The central patch retains the fine mottled canopy appearance with only small differences, so k=251 is accepted under the stated lab rule.",
+    "remaining_differences": "Fine canopy texture is slightly smoothed or altered under magnification. Mean absolute error is about 0.80 gray levels and maximum error about 5.09. Rank 250 narrowly misses the SSIM threshold; its visual difference from 251 is very small."
+  },
+  "baltic": {
+    "accepted_k": 175,
+    "input_sha256": "333b05977709a0a7e71489860347a8421cb1804fa7d7e78e55e7c7fc0970ba44",
+    "review_method": "Assistant inspection of generated full-frame, enlarged central-patch and absolute-error plots; no human participant study.",
+    "visual_review": "The full-frame sea crop and enlarged patch look close to the original at the fixed brightness scale. Rank 175 is accepted under the conservative joint rule; much lower ranks can already look plausible because this crop has very little contrast.",
+    "remaining_differences": "Some subtle texture and noise-like variation is suppressed or altered. Mean absolute error is about 0.64 gray levels and maximum error about 4.20. Rank 174 looks almost the same but narrowly misses SSIM 0.99. This choice is not evidence that 175 components are the human detection threshold."
+  }
+}
