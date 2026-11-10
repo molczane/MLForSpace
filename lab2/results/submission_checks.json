@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "input_hashes": 26,
+  "histograms_verified_against_rasters": 14,
+  "lsb_regions_verified": 2,
+  "cs_methods_verified": 5,
+  "figures_decoded": 12,
+  "private_credentials_required_for_saved_data": false,
+  "relocated_copy_offline": "passed"
+}

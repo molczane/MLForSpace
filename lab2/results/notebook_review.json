@@ -1,0 +1,107 @@
+{
+  "notebook": "lab2/analysis.ipynb",
+  "review_method": "IDE notebook source/output tools; fresh kernel Run All",
+  "status": "passed",
+  "code_cell_count": 17,
+  "cells": [
+    {
+      "id": "eff1d74c64aa8c9",
+      "status": "STOPPED_OK",
+      "execution_count": 1
+    },
+    {
+      "id": "989d1a1a3e72cc3a",
+      "status": "STOPPED_OK",
+      "execution_count": 2
+    },
+    {
+      "id": "730488cc62537de7",
+      "status": "STOPPED_OK",
+      "execution_count": 3
+    },
+    {
+      "id": "b8a3be213a052af0",
+      "status": "STOPPED_OK",
+      "execution_count": 4
+    },
+    {
+      "id": "30e103e27f24d50b",
+      "status": "STOPPED_OK",
+      "execution_count": 5
+    },
+    {
+      "id": "c3fc2c8fb2784b2c",
+      "status": "STOPPED_OK",
+      "execution_count": 6
+    },
+    {
+      "id": "1c35ba60e34eb089",
+      "status": "STOPPED_OK",
+      "execution_count": 7
+    },
+    {
+      "id": "8f8577ba27693ee8",
+      "status": "STOPPED_OK",
+      "execution_count": 8
+    },
+    {
+      "id": "4274154b949e4d1c",
+      "status": "STOPPED_OK",
+      "execution_count": 9
+    },
+    {
+      "id": "8467135437d8263f",
+      "status": "STOPPED_OK",
+      "execution_count": 10
+    },
+    {
+      "id": "283d37c5a748e43b",
+      "status": "STOPPED_OK",
+      "execution_count": 11
+    },
+    {
+      "id": "9cb659dd231460d2",
+      "status": "STOPPED_OK",
+      "execution_count": 12
+    },
+    {
+      "id": "cdb4331d339998b0",
+      "status": "STOPPED_OK",
+      "execution_count": 13
+    },
+    {
+      "id": "bc769a9b686ef534",
+      "status": "STOPPED_OK",
+      "execution_count": 14
+    },
+    {
+      "id": "5079f88de29d42ac",
+      "status": "STOPPED_OK",
+      "execution_count": 15
+    },
+    {
+      "id": "a0972c7b5db24f0a",
+      "status": "STOPPED_OK",
+      "execution_count": 16
+    },
+    {
+      "id": "57e82c96672941b",
+      "status": "STOPPED_OK",
+      "execution_count": 17
+    }
+  ],
+  "written_answer_sections_reviewed": [
+    "e8bcd7534ddab223",
+    "631083011c63b271",
+    "4ed75b0fc75f67f2",
+    "e2ceb49588d4eec5",
+    "a3a502b877823f5a",
+    "49a7f516a11e7d6e",
+    "efc56574f9d773d7",
+    "c22460e146189fc4",
+    "ac110612f128e94b"
+  ],
+  "scientific_figures_reviewed": 12,
+  "expected_scientific_failures": "The three supplied CS optimization runs report nonconvergence; their diagnostic notebook cells run successfully.",
+  "artifact_checks": "lab2/results/submission_checks.json"
+}

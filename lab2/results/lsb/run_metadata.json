@@ -1,0 +1,99 @@
+{
+  "band": "B04 red",
+  "dtype": "uint16",
+  "clear_mask_hex": "0xFFFC",
+  "random_generator": "PCG64",
+  "seeds": {
+    "krakow": 20261109,
+    "bialowieza": 20261110
+  },
+  "mask": "original phase-1 common optical mask; all pixels manipulated",
+  "source_hashes": {
+    "lab1/data/sentinel2/bialowieza/metadata.json": "7835aec8701644820ab5907333d0bf13d11d2758602360b3a90d83bd084e2377",
+    "lab1/data/sentinel2/bialowieza/rgb.png": "8d836554b8ceb9e909ebde65ae9b38d8496f4afc7cceccbd0e4bfca4523ddfec",
+    "lab1/data/sentinel2/bialowieza/rgb_dn.tif": "8ffab5fc75959ce49646b137ca4335599ba7f1a43b57f4aaa6b86535bfeb30a8",
+    "lab1/data/sentinel2/bialowieza/rgb_reflectance.tif": "cfa44ee6de1bc87a447ae94db83486a31791172d947d2c37b61752bd2976b17c",
+    "lab1/data/sentinel2/bialowieza/scl.tif": "058a59a750dae92788525c1c37b5534d38f2562759a82d2b78c598736bb55b58",
+    "lab1/data/sentinel2/bialowieza/source_item.json": "d0e39763697d6bb7d2c7344db57b60a0318c6b5a816ce64ade42969a6a6c7210",
+    "lab1/data/sentinel2/krakow/metadata.json": "03e3a5a79d9952eeb78f3acb5b6cf3635118a9288be7b1828f5fadf472663804",
+    "lab1/data/sentinel2/krakow/rgb.png": "c454e5a5b490cfe03b6075821ce33c079d866f1704f599b6a1e1651f895641b7",
+    "lab1/data/sentinel2/krakow/rgb_dn.tif": "f3cbc5438866d2cb26ef2e228eee727e002d3e66712ab270bfe0f6b74cd1bb31",
+    "lab1/data/sentinel2/krakow/rgb_reflectance.tif": "5b28cbe49472aac947c5bca3bb8fdfbd4ecd285dcbc250d65a087233f7283845",
+    "lab1/data/sentinel2/krakow/scl.tif": "754e14fa8acd0431bfa1096b4d69e4c58d8645f780ebe06dc9f021494b82f571",
+    "lab1/data/sentinel2/krakow/source_item.json": "de4e1ff8e4aef60356082240a9f714a171c0ecbbca18d891bf3efc267e6767bf",
+    "lab2/data/sentinel1/bialowieza/candidates.json": "250e2b31cce2519edfb2f0ef846b588de68277b702814b2c6a780ac148fb832e",
+    "lab2/data/sentinel1/bialowieza/gamma0_db.tif": "1228d492b013745c9cfe7b66f8e52bd44867a62a3b7c40646bc2ef21c3dbe976",
+    "lab2/data/sentinel1/bialowieza/gamma0_linear.tif": "350388338de22cde955864ac89d0bb5fc3d24ae2429523ffe81a3735154b4586",
+    "lab2/data/sentinel1/bialowieza/metadata.json": "9c4824128dcbc7318a3e079d58cca1550d42af623622e02e21cec805f6ace113",
+    "lab2/data/sentinel1/bialowieza/source_item.json": "46b166b884704b54460bba82aa66bf4ff50c41c280f8c142823b7a5007a66468",
+    "lab2/data/sentinel1/bialowieza/valid_mask.tif": "47b6bc7c856390ab217363c7a1eb5fa1aa1558e3999b647fb4b5f0a91b7c4a78",
+    "lab2/data/sentinel1/krakow/candidates.json": "022e70750632dac359183f6d1a1171d821a81781e18030098f92db53eefa63c4",
+    "lab2/data/sentinel1/krakow/gamma0_db.tif": "4e848f8991f86a201123008e1fcfbf3e5a0d475563644a131c4634853f19eb83",
+    "lab2/data/sentinel1/krakow/gamma0_linear.tif": "c6af22ce38d791bc806123af20015c60a1637e27cd9f926b6c3a40738a713cf2",
+    "lab2/data/sentinel1/krakow/metadata.json": "13cbfda8473ce40066c6b14004342a650909140dc9a3df8ed490d90d5e413578",
+    "lab2/data/sentinel1/krakow/source_item.json": "2d47c49c85ed5a74c08a5412b15f2e61e5684813424bf4c56de73b807e9927bb",
+    "lab2/data/sentinel1/krakow/valid_mask.tif": "b786b4c5fb5b46399e6b6a527c80be3a900623c6e5d0fb66bd4c90d4ca41e355",
+    "lab2/data/sentinel2/bialowieza/valid_mask.tif": "b77b4267fdf099a822a1873659fac96684ba4374890ecee49a9738c772cc8ad0",
+    "lab2/data/sentinel2/krakow/valid_mask.tif": "336844b4164a884ef2ac5f4e9666fb10f47a54777aa769bbaa6e7b6ae79894a3"
+  },
+  "versions": {
+    "python": "3.12.15",
+    "packages": {
+      "numpy": "2.5.4",
+      "rasterio": "1.5.2",
+      "matplotlib": "3.11.2",
+      "nbformat": "5.11.1",
+      "nbclient": "0.11.0",
+      "pyproj": "3.8.0",
+      "pillow": "13.0.0"
+    },
+    "regions": {
+      "krakow": {
+        "sentinel2_shape": [
+          3,
+          512,
+          512
+        ],
+        "sentinel1_shape": [
+          2,
+          512,
+          512
+        ],
+        "s2_valid_pixels": 262064,
+        "s1_valid_pixels": 262144,
+        "grid_and_hash_checks": "passed"
+      },
+      "bialowieza": {
+        "sentinel2_shape": [
+          3,
+          512,
+          512
+        ],
+        "sentinel1_shape": [
+          2,
+          512,
+          512
+        ],
+        "s2_valid_pixels": 262144,
+        "s1_valid_pixels": 262144,
+        "grid_and_hash_checks": "passed"
+      }
+    }
+  },
+  "quantization": "none; original DN used",
+  "reflectance_scale": 0.0001,
+  "reflectance_offset": -0.1,
+  "display": "clip((DN * 0.0001 - 0.1) / 0.3, 0, 1) ** (1 / 2.2); same mapping for all panels",
+  "detail_crop_rows_cols": [
+    224,
+    288,
+    224,
+    288
+  ],
+  "sha256": {
+    "lab2/results/lsb/bialowieza/B04_modified.tif": "abe7966828fa0014790be01a44a02bd169703170bf42e057c94404a6ca8ebcaa",
+    "lab2/results/lsb/bialowieza/B04_original.tif": "b2bf1886c0924476afb60bcb66cec5c9fd170bec38260f93f1d72026b454d916",
+    "lab2/results/lsb/krakow/B04_modified.tif": "9755de75901e37b8d8598040c6f779f4753c1642f4a52202becc90a36596921b",
+    "lab2/results/lsb/krakow/B04_original.tif": "4e7d8041a00b1f2fcf619ee5d7bfbf33643db3ac3488a7b27e9af7603222ca0e"
+  }
+}

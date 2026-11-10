@@ -1,0 +1,110 @@
+{
+  "supplied_signal": [
+    {
+      "method": "zero_filled",
+      "solver_success": null,
+      "status": null,
+      "message": "No solver: baseline",
+      "iterations": null,
+      "evaluations": null,
+      "runtime_seconds": 0.0,
+      "observed_residual_l2": 0.0,
+      "observed_max_abs_error": 0.0,
+      "full_relative_l2_error": 0.960105297543294,
+      "unobserved_rmse": 1.0120398446101584,
+      "coefficient_l1": 110.37252681986104,
+      "coefficient_l0_exact": 500,
+      "coefficients_abs_gt_1e-6": 500,
+      "warnings": []
+    },
+    {
+      "method": "supplied_L2_only",
+      "solver_success": false,
+      "status": 2,
+      "message": "Desired error not necessarily achieved due to precision loss.",
+      "iterations": 3,
+      "evaluations": 33078,
+      "runtime_seconds": 0.21624450001399964,
+      "observed_residual_l2": 5.22863196072159e-07,
+      "observed_max_abs_error": 1.691829329963923e-07,
+      "full_relative_l2_error": 0.9601052978364114,
+      "unobserved_rmse": 1.012039844919131,
+      "coefficient_l1": 110.37253311741415,
+      "coefficient_l0_exact": 500,
+      "coefficients_abs_gt_1e-6": 500,
+      "warnings": [
+        "Desired error not necessarily achieved due to precision loss."
+      ]
+    },
+    {
+      "method": "supplied_L0_constraint",
+      "solver_success": false,
+      "status": 9,
+      "message": "Iteration limit reached",
+      "iterations": 100,
+      "evaluations": 51377,
+      "runtime_seconds": 0.5585806249873713,
+      "observed_residual_l2": 1.394442742597424e-05,
+      "observed_max_abs_error": 6.929421918544509e-06,
+      "full_relative_l2_error": 0.9603312261099958,
+      "unobserved_rmse": 1.0122779942297033,
+      "coefficient_l1": 110.37693855107327,
+      "coefficient_l0_exact": 500,
+      "coefficients_abs_gt_1e-6": 500,
+      "warnings": []
+    },
+    {
+      "method": "supplied_L1_norm_equality",
+      "solver_success": false,
+      "status": 9,
+      "message": "Iteration limit reached",
+      "iterations": 100,
+      "evaluations": 50911,
+      "runtime_seconds": 0.7321807499974966,
+      "observed_residual_l2": 0.8881224727363877,
+      "observed_max_abs_error": 0.3319542587591324,
+      "full_relative_l2_error": 0.8167930239132575,
+      "unobserved_rmse": 0.8599569245415113,
+      "coefficient_l1": 57.963881275354765,
+      "coefficient_l0_exact": 500,
+      "coefficients_abs_gt_1e-6": 500,
+      "warnings": []
+    },
+    {
+      "method": "corrected_basis_pursuit",
+      "solver_success": true,
+      "status": 0,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "iterations": 135,
+      "evaluations": 0,
+      "runtime_seconds": 0.014302083989605308,
+      "observed_residual_l2": 1.3262192542088622e-13,
+      "observed_max_abs_error": 3.68594044175552e-14,
+      "full_relative_l2_error": 0.6660072984811264,
+      "unobserved_rmse": 0.702033333831987,
+      "coefficient_l1": 62.57174370840833,
+      "coefficient_l0_exact": 50,
+      "coefficients_abs_gt_1e-6": 50,
+      "warnings": []
+    }
+  ],
+  "separate_exact_sparse_control": {
+    "target": "separate exactly 2-sparse DCT control",
+    "nonzero_coefficient_indices": [
+      12,
+      74
+    ],
+    "nonzero_coefficient_values": [
+      12.0,
+      -7.0
+    ],
+    "solver_success": true,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "iterations": 24,
+    "runtime_seconds": 0.009583791019394994,
+    "observed_max_abs_error": 3.3306690738754696e-16,
+    "full_relative_l2_error": 3.0347302082583144e-16,
+    "unobserved_rmse": 1.894005943400725e-16,
+    "coefficients_abs_gt_1e-6": 2
+  }
+}

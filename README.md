@@ -1,4 +1,13 @@
-# ML for Space — Sentinel-2 SVD lab
+# ML for Space
+
+- **Lab 2:** [executed analysis notebook](lab2/analysis.ipynb),
+  [results and reproduction instructions](lab2/README.md), and
+  [submission review](lab2/SUBMISSION_REVIEW.md). Covers Sentinel-1/2
+  distributions, two-LSB replacement and compressive sensing.
+- **Lab 1:** [SVD report](lab1/results/svd/README.md) and
+  [executed notebook](lab1/algebra.ipynb).
+
+## Lab 1 — Sentinel-2 SVD
 
 This lab compares SVD reconstruction of three 512 × 512 satellite image crops at
 10 m per pixel: urban Kraków, Puszcza Białowieska forest and Baltic Sea water.

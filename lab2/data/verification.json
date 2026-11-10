@@ -1,0 +1,44 @@
+{
+  "python": "3.12.15",
+  "packages": {
+    "numpy": "2.5.4",
+    "rasterio": "1.5.2",
+    "matplotlib": "3.11.2",
+    "nbformat": "5.11.1",
+    "nbclient": "0.11.0",
+    "pyproj": "3.8.0",
+    "pillow": "13.0.0"
+  },
+  "regions": {
+    "krakow": {
+      "sentinel2_shape": [
+        3,
+        512,
+        512
+      ],
+      "sentinel1_shape": [
+        2,
+        512,
+        512
+      ],
+      "s2_valid_pixels": 262064,
+      "s1_valid_pixels": 262144,
+      "grid_and_hash_checks": "passed"
+    },
+    "bialowieza": {
+      "sentinel2_shape": [
+        3,
+        512,
+        512
+      ],
+      "sentinel1_shape": [
+        2,
+        512,
+        512
+      ],
+      "s2_valid_pixels": 262144,
+      "s1_valid_pixels": 262144,
+      "grid_and_hash_checks": "passed"
+    }
+  }
+}

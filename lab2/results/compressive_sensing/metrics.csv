@@ -1,0 +1,6 @@
+method,solver_success,status,message,iterations,evaluations,runtime_seconds,observed_residual_l2,observed_max_abs_error,full_relative_l2_error,unobserved_rmse,coefficient_l1,coefficient_l0_exact,coefficients_abs_gt_1e-6,warnings
+zero_filled,,,No solver: baseline,,,0.0,0.0,0.0,0.960105297543294,1.0120398446101584,110.37252681986104,500,500,[]
+supplied_L2_only,False,2,Desired error not necessarily achieved due to precision loss.,3,33078,0.21624450001399964,5.22863196072159e-07,1.691829329963923e-07,0.9601052978364114,1.012039844919131,110.37253311741415,500,500,['Desired error not necessarily achieved due to precision loss.']
+supplied_L0_constraint,False,9,Iteration limit reached,100,51377,0.5585806249873713,1.394442742597424e-05,6.929421918544509e-06,0.9603312261099958,1.0122779942297033,110.37693855107327,500,500,[]
+supplied_L1_norm_equality,False,9,Iteration limit reached,100,50911,0.7321807499974966,0.8881224727363877,0.3319542587591324,0.8167930239132575,0.8599569245415113,57.963881275354765,500,500,[]
+corrected_basis_pursuit,True,0,Optimization terminated successfully. (HiGHS Status 7: Optimal),135,0,0.014302083989605308,1.3262192542088622e-13,3.68594044175552e-14,0.6660072984811264,0.702033333831987,62.57174370840833,50,50,[]

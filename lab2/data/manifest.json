@@ -1,0 +1,426 @@
+{
+  "prepared_utc": "2026-11-09T00:28:37.034588+00:00",
+  "regions": {
+    "krakow": {
+      "name": "Kraków",
+      "terrain": "urban",
+      "sentinel2": {
+        "scene_id": "S2A_T34UDA_20250813T094043_L2A",
+        "acquired_utc": "2025-08-13T09:46:56.167000Z",
+        "bands": [
+          "B04",
+          "B03",
+          "B02"
+        ],
+        "units": "dimensionless surface reflectance (BOA)",
+        "crs": "EPSG:32634",
+        "shape": [
+          512,
+          512
+        ],
+        "pixel_spacing_m": [
+          10.0,
+          10.0
+        ],
+        "bounds": [
+          421440.0,
+          5543440.0,
+          426560.0,
+          5548560.0
+        ],
+        "transform": [
+          10.0,
+          0.0,
+          421440.0,
+          0.0,
+          -10.0,
+          5548560.0
+        ],
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                19.902942015809465,
+                50.03806988603085
+              ],
+              [
+                19.974428149907844,
+                50.038723644763536
+              ],
+              [
+                19.973445991352676,
+                50.084765314181
+              ],
+              [
+                19.901891429610203,
+                50.084110494243895
+              ],
+              [
+                19.902942015809465,
+                50.03806988603085
+              ]
+            ]
+          ]
+        },
+        "conversions": {
+          "red": {
+            "scale": 0.0001,
+            "effective_offset": -0.1,
+            "catalogue_offset": -0.1
+          },
+          "green": {
+            "scale": 0.0001,
+            "effective_offset": -0.1,
+            "catalogue_offset": -0.1
+          },
+          "blue": {
+            "scale": 0.0001,
+            "effective_offset": -0.1,
+            "catalogue_offset": -0.1
+          }
+        },
+        "valid_pixels": 262064,
+        "excluded_pixels": 80,
+        "scl_fractions": {
+          "2": 0.0111541748046875,
+          "4": 0.4876861572265625,
+          "5": 0.4756622314453125,
+          "6": 0.0251922607421875,
+          "7": 0.00030517578125
+        },
+        "paths": {
+          "reflectance": "lab1/data/sentinel2/krakow/rgb_reflectance.tif",
+          "dn": "lab1/data/sentinel2/krakow/rgb_dn.tif",
+          "preview": "lab1/data/sentinel2/krakow/rgb.png",
+          "scl": "lab1/data/sentinel2/krakow/scl.tif",
+          "metadata": "lab1/data/sentinel2/krakow/metadata.json",
+          "source_item": "lab1/data/sentinel2/krakow/source_item.json",
+          "mask": "lab2/data/sentinel2/krakow/valid_mask.tif"
+        }
+      },
+      "sentinel1": {
+        "scene_id": "S1A_IW_GRDH_1SDV_20250812T045328_20250812T045353_060498_rtc",
+        "source_grd_id": "S1A_IW_GRDH_1SDV_20250812T045328_20250812T045353_060498_0785B8_E5D2",
+        "acquired_utc": "2025-08-12T04:53:40.510232Z",
+        "offset_from_sentinel2_hours": -28.887682435555554,
+        "collection": "sentinel-1-rtc",
+        "product": "Catalyst radiometrically terrain-corrected GRD (RTC)",
+        "polarizations": [
+          "VV",
+          "VH"
+        ],
+        "units": "gamma0 linear intensity ratio; dB = 10 log10(linear)",
+        "orbit_state": "descending",
+        "relative_orbit": 51,
+        "instrument_mode": "IW",
+        "sources": {
+          "vv": {
+            "crs": "EPSG:32634",
+            "pixel_spacing": [
+              10.0,
+              10.0
+            ],
+            "window": [
+              17032,
+              4519,
+              516,
+              516
+            ],
+            "transform": [
+              10.0,
+              0.0,
+              251100.0,
+              0.0,
+              -10.0,
+              5593770.0
+            ],
+            "nodata": -32768.0,
+            "dtype": "float32"
+          },
+          "vh": {
+            "crs": "EPSG:32634",
+            "pixel_spacing": [
+              10.0,
+              10.0
+            ],
+            "window": [
+              17032,
+              4519,
+              516,
+              516
+            ],
+            "transform": [
+              10.0,
+              0.0,
+              251100.0,
+              0.0,
+              -10.0,
+              5593770.0
+            ],
+            "nodata": -32768.0,
+            "dtype": "float32"
+          }
+        },
+        "valid_pixels": 262144,
+        "excluded_pixels": 0,
+        "resampling": "nearest neighbour to exact Sentinel-2 CRS/transform/shape; no speckle filtering",
+        "linear_ranges": {
+          "VV": [
+            0.0029979688115417957,
+            655.9075927734375
+          ],
+          "VH": [
+            0.000868091534357518,
+            234.76268005371094
+          ]
+        },
+        "attempts": [
+          {
+            "scene_id": "S1A_IW_GRDH_1SDV_20250812T045328_20250812T045353_060498_rtc",
+            "selected": true
+          }
+        ],
+        "paths": {
+          "linear": "lab2/data/sentinel1/krakow/gamma0_linear.tif",
+          "db": "lab2/data/sentinel1/krakow/gamma0_db.tif",
+          "mask": "lab2/data/sentinel1/krakow/valid_mask.tif",
+          "source_item": "lab2/data/sentinel1/krakow/source_item.json",
+          "candidates": "lab2/data/sentinel1/krakow/candidates.json",
+          "metadata": "lab2/data/sentinel1/krakow/metadata.json"
+        }
+      }
+    },
+    "bialowieza": {
+      "name": "Puszcza Białowieska",
+      "terrain": "forest",
+      "sentinel2": {
+        "scene_id": "S2C_T34UFD_20250702T094053_L2A",
+        "acquired_utc": "2025-07-02T09:46:14.474000Z",
+        "bands": [
+          "B04",
+          "B03",
+          "B02"
+        ],
+        "units": "dimensionless surface reflectance (BOA)",
+        "crs": "EPSG:32634",
+        "shape": [
+          512,
+          512
+        ],
+        "pixel_spacing_m": [
+          10.0,
+          10.0
+        ],
+        "bounds": [
+          688750.0,
+          5846230.0,
+          693870.0,
+          5851350.0
+        ],
+        "transform": [
+          10.0,
+          0.0,
+          688750.0,
+          0.0,
+          -10.0,
+          5851350.0
+        ],
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                23.795609416569448,
+                52.73295040686567
+              ],
+              [
+                23.871340275236918,
+                52.73113968090796
+              ],
+              [
+                23.874366989728983,
+                52.77710958159274
+              ],
+              [
+                23.798556559664515,
+                52.77892330670257
+              ],
+              [
+                23.795609416569448,
+                52.73295040686567
+              ]
+            ]
+          ]
+        },
+        "conversions": {
+          "red": {
+            "scale": 0.0001,
+            "effective_offset": -0.1,
+            "catalogue_offset": -0.1
+          },
+          "green": {
+            "scale": 0.0001,
+            "effective_offset": -0.1,
+            "catalogue_offset": -0.1
+          },
+          "blue": {
+            "scale": 0.0001,
+            "effective_offset": -0.1,
+            "catalogue_offset": -0.1
+          }
+        },
+        "valid_pixels": 262144,
+        "excluded_pixels": 0,
+        "scl_fractions": {
+          "4": 1.0
+        },
+        "paths": {
+          "reflectance": "lab1/data/sentinel2/bialowieza/rgb_reflectance.tif",
+          "dn": "lab1/data/sentinel2/bialowieza/rgb_dn.tif",
+          "preview": "lab1/data/sentinel2/bialowieza/rgb.png",
+          "scl": "lab1/data/sentinel2/bialowieza/scl.tif",
+          "metadata": "lab1/data/sentinel2/bialowieza/metadata.json",
+          "source_item": "lab1/data/sentinel2/bialowieza/source_item.json",
+          "mask": "lab2/data/sentinel2/bialowieza/valid_mask.tif"
+        }
+      },
+      "sentinel1": {
+        "scene_id": "S1A_IW_GRDH_1SDV_20250702T044406_20250702T044431_059900_0770BD_rtc",
+        "source_grd_id": null,
+        "acquired_utc": "2025-07-02T04:44:19.484596Z",
+        "offset_from_sentinel2_hours": -5.0319415011111115,
+        "collection": "sentinel-1-rtc",
+        "product": "Catalyst radiometrically terrain-corrected GRD (RTC)",
+        "polarizations": [
+          "VV",
+          "VH"
+        ],
+        "units": "gamma0 linear intensity ratio; dB = 10 log10(linear)",
+        "orbit_state": "descending",
+        "relative_orbit": 153,
+        "instrument_mode": "IW",
+        "sources": {
+          "vv": {
+            "crs": "EPSG:32634",
+            "pixel_spacing": [
+              10.0,
+              10.0
+            ],
+            "window": [
+              21230,
+              19362,
+              516,
+              516
+            ],
+            "transform": [
+              10.0,
+              0.0,
+              476430.0,
+              0.0,
+              -10.0,
+              6044990.0
+            ],
+            "nodata": -32768.0,
+            "dtype": "float32"
+          },
+          "vh": {
+            "crs": "EPSG:32634",
+            "pixel_spacing": [
+              10.0,
+              10.0
+            ],
+            "window": [
+              21230,
+              19362,
+              516,
+              516
+            ],
+            "transform": [
+              10.0,
+              0.0,
+              476430.0,
+              0.0,
+              -10.0,
+              6044990.0
+            ],
+            "nodata": -32768.0,
+            "dtype": "float32"
+          }
+        },
+        "valid_pixels": 262144,
+        "excluded_pixels": 0,
+        "resampling": "nearest neighbour to exact Sentinel-2 CRS/transform/shape; no speckle filtering",
+        "linear_ranges": {
+          "VV": [
+            0.006751593668013811,
+            0.8613353371620178
+          ],
+          "VH": [
+            0.002924056025221944,
+            0.22538445889949799
+          ]
+        },
+        "attempts": [
+          {
+            "scene_id": "S1A_IW_GRDH_1SDV_20250702T044406_20250702T044431_059900_0770BD_rtc",
+            "selected": true
+          }
+        ],
+        "paths": {
+          "linear": "lab2/data/sentinel1/bialowieza/gamma0_linear.tif",
+          "db": "lab2/data/sentinel1/bialowieza/gamma0_db.tif",
+          "mask": "lab2/data/sentinel1/bialowieza/valid_mask.tif",
+          "source_item": "lab2/data/sentinel1/bialowieza/source_item.json",
+          "candidates": "lab2/data/sentinel1/bialowieza/candidates.json",
+          "metadata": "lab2/data/sentinel1/bialowieza/metadata.json"
+        }
+      }
+    }
+  },
+  "catalogue": "https://planetarycomputer.microsoft.com/api/stac/v1",
+  "selection": "nearest UTC acquisition within +/-12 days, VV+VH, full valid crop",
+  "sentinel2_mask": {
+    "excluded_SCL": [
+      0,
+      1,
+      3,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "rule": "all bands finite, unmasked, DN>0; retain negative reflectance"
+  },
+  "sentinel1_mask": "finite positive gamma0 in both VV and VH; not an independent layover/shadow classification",
+  "attribution": "Contains modified Copernicus Sentinel data 2025. S1 processed by Catalyst, hosted by Microsoft Planetary Computer (CC-BY-4.0); S2 accessed through Element 84 Earth Search.",
+  "sha256": {
+    "lab1/data/sentinel2/bialowieza/metadata.json": "7835aec8701644820ab5907333d0bf13d11d2758602360b3a90d83bd084e2377",
+    "lab1/data/sentinel2/bialowieza/rgb.png": "8d836554b8ceb9e909ebde65ae9b38d8496f4afc7cceccbd0e4bfca4523ddfec",
+    "lab1/data/sentinel2/bialowieza/rgb_dn.tif": "8ffab5fc75959ce49646b137ca4335599ba7f1a43b57f4aaa6b86535bfeb30a8",
+    "lab1/data/sentinel2/bialowieza/rgb_reflectance.tif": "cfa44ee6de1bc87a447ae94db83486a31791172d947d2c37b61752bd2976b17c",
+    "lab1/data/sentinel2/bialowieza/scl.tif": "058a59a750dae92788525c1c37b5534d38f2562759a82d2b78c598736bb55b58",
+    "lab1/data/sentinel2/bialowieza/source_item.json": "d0e39763697d6bb7d2c7344db57b60a0318c6b5a816ce64ade42969a6a6c7210",
+    "lab1/data/sentinel2/krakow/metadata.json": "03e3a5a79d9952eeb78f3acb5b6cf3635118a9288be7b1828f5fadf472663804",
+    "lab1/data/sentinel2/krakow/rgb.png": "c454e5a5b490cfe03b6075821ce33c079d866f1704f599b6a1e1651f895641b7",
+    "lab1/data/sentinel2/krakow/rgb_dn.tif": "f3cbc5438866d2cb26ef2e228eee727e002d3e66712ab270bfe0f6b74cd1bb31",
+    "lab1/data/sentinel2/krakow/rgb_reflectance.tif": "5b28cbe49472aac947c5bca3bb8fdfbd4ecd285dcbc250d65a087233f7283845",
+    "lab1/data/sentinel2/krakow/scl.tif": "754e14fa8acd0431bfa1096b4d69e4c58d8645f780ebe06dc9f021494b82f571",
+    "lab1/data/sentinel2/krakow/source_item.json": "de4e1ff8e4aef60356082240a9f714a171c0ecbbca18d891bf3efc267e6767bf",
+    "lab2/data/sentinel1/bialowieza/candidates.json": "250e2b31cce2519edfb2f0ef846b588de68277b702814b2c6a780ac148fb832e",
+    "lab2/data/sentinel1/bialowieza/gamma0_db.tif": "1228d492b013745c9cfe7b66f8e52bd44867a62a3b7c40646bc2ef21c3dbe976",
+    "lab2/data/sentinel1/bialowieza/gamma0_linear.tif": "350388338de22cde955864ac89d0bb5fc3d24ae2429523ffe81a3735154b4586",
+    "lab2/data/sentinel1/bialowieza/metadata.json": "9c4824128dcbc7318a3e079d58cca1550d42af623622e02e21cec805f6ace113",
+    "lab2/data/sentinel1/bialowieza/source_item.json": "46b166b884704b54460bba82aa66bf4ff50c41c280f8c142823b7a5007a66468",
+    "lab2/data/sentinel1/bialowieza/valid_mask.tif": "47b6bc7c856390ab217363c7a1eb5fa1aa1558e3999b647fb4b5f0a91b7c4a78",
+    "lab2/data/sentinel1/krakow/candidates.json": "022e70750632dac359183f6d1a1171d821a81781e18030098f92db53eefa63c4",
+    "lab2/data/sentinel1/krakow/gamma0_db.tif": "4e848f8991f86a201123008e1fcfbf3e5a0d475563644a131c4634853f19eb83",
+    "lab2/data/sentinel1/krakow/gamma0_linear.tif": "c6af22ce38d791bc806123af20015c60a1637e27cd9f926b6c3a40738a713cf2",
+    "lab2/data/sentinel1/krakow/metadata.json": "13cbfda8473ce40066c6b14004342a650909140dc9a3df8ed490d90d5e413578",
+    "lab2/data/sentinel1/krakow/source_item.json": "2d47c49c85ed5a74c08a5412b15f2e61e5684813424bf4c56de73b807e9927bb",
+    "lab2/data/sentinel1/krakow/valid_mask.tif": "b786b4c5fb5b46399e6b6a527c80be3a900623c6e5d0fb66bd4c90d4ca41e355",
+    "lab2/data/sentinel2/bialowieza/valid_mask.tif": "b77b4267fdf099a822a1873659fac96684ba4374890ecee49a9738c772cc8ad0",
+    "lab2/data/sentinel2/krakow/valid_mask.tif": "336844b4164a884ef2ac5f4e9666fb10f47a54777aa769bbaa6e7b6ae79894a3"
+  }
+}

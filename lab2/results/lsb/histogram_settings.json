@@ -1,0 +1,20 @@
+{
+  "coarse_bin_width_dn": 64,
+  "coarse_start_dn": 0,
+  "fine_bin_width_dn": 1,
+  "normalization": "probability mass = count / full valid N; detail not renormalized",
+  "regions": {
+    "krakow": {
+      "n": 262064,
+      "fine_view_dn_start": 1664,
+      "fine_view_dn_stop_exclusive": 1728,
+      "single_dn_probability_total_variation": 0.26681268697722693
+    },
+    "bialowieza": {
+      "n": 262144,
+      "fine_view_dn_start": 1100,
+      "fine_view_dn_stop_exclusive": 1164,
+      "single_dn_probability_total_variation": 0.0562591552734375
+    }
+  }
+}

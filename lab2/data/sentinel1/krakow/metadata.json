@@ -1,0 +1,90 @@
+{
+  "scene_id": "S1A_IW_GRDH_1SDV_20250812T045328_20250812T045353_060498_rtc",
+  "source_grd_id": "S1A_IW_GRDH_1SDV_20250812T045328_20250812T045353_060498_0785B8_E5D2",
+  "acquired_utc": "2025-08-12T04:53:40.510232Z",
+  "offset_from_sentinel2_hours": -28.887682435555554,
+  "collection": "sentinel-1-rtc",
+  "product": "Catalyst radiometrically terrain-corrected GRD (RTC)",
+  "polarizations": [
+    "VV",
+    "VH"
+  ],
+  "units": "gamma0 linear intensity ratio; dB = 10 log10(linear)",
+  "orbit_state": "descending",
+  "relative_orbit": 51,
+  "instrument_mode": "IW",
+  "sources": {
+    "vv": {
+      "crs": "EPSG:32634",
+      "pixel_spacing": [
+        10.0,
+        10.0
+      ],
+      "window": [
+        17032,
+        4519,
+        516,
+        516
+      ],
+      "transform": [
+        10.0,
+        0.0,
+        251100.0,
+        0.0,
+        -10.0,
+        5593770.0
+      ],
+      "nodata": -32768.0,
+      "dtype": "float32"
+    },
+    "vh": {
+      "crs": "EPSG:32634",
+      "pixel_spacing": [
+        10.0,
+        10.0
+      ],
+      "window": [
+        17032,
+        4519,
+        516,
+        516
+      ],
+      "transform": [
+        10.0,
+        0.0,
+        251100.0,
+        0.0,
+        -10.0,
+        5593770.0
+      ],
+      "nodata": -32768.0,
+      "dtype": "float32"
+    }
+  },
+  "valid_pixels": 262144,
+  "excluded_pixels": 0,
+  "resampling": "nearest neighbour to exact Sentinel-2 CRS/transform/shape; no speckle filtering",
+  "linear_ranges": {
+    "VV": [
+      0.0029979688115417957,
+      655.9075927734375
+    ],
+    "VH": [
+      0.000868091534357518,
+      234.76268005371094
+    ]
+  },
+  "attempts": [
+    {
+      "scene_id": "S1A_IW_GRDH_1SDV_20250812T045328_20250812T045353_060498_rtc",
+      "selected": true
+    }
+  ],
+  "paths": {
+    "linear": "lab2/data/sentinel1/krakow/gamma0_linear.tif",
+    "db": "lab2/data/sentinel1/krakow/gamma0_db.tif",
+    "mask": "lab2/data/sentinel1/krakow/valid_mask.tif",
+    "source_item": "lab2/data/sentinel1/krakow/source_item.json",
+    "candidates": "lab2/data/sentinel1/krakow/candidates.json"
+  }
+}

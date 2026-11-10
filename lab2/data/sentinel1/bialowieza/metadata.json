@@ -1,0 +1,90 @@
+{
+  "scene_id": "S1A_IW_GRDH_1SDV_20250702T044406_20250702T044431_059900_0770BD_rtc",
+  "source_grd_id": null,
+  "acquired_utc": "2025-07-02T04:44:19.484596Z",
+  "offset_from_sentinel2_hours": -5.0319415011111115,
+  "collection": "sentinel-1-rtc",
+  "product": "Catalyst radiometrically terrain-corrected GRD (RTC)",
+  "polarizations": [
+    "VV",
+    "VH"
+  ],
+  "units": "gamma0 linear intensity ratio; dB = 10 log10(linear)",
+  "orbit_state": "descending",
+  "relative_orbit": 153,
+  "instrument_mode": "IW",
+  "sources": {
+    "vv": {
+      "crs": "EPSG:32634",
+      "pixel_spacing": [
+        10.0,
+        10.0
+      ],
+      "window": [
+        21230,
+        19362,
+        516,
+        516
+      ],
+      "transform": [
+        10.0,
+        0.0,
+        476430.0,
+        0.0,
+        -10.0,
+        6044990.0
+      ],
+      "nodata": -32768.0,
+      "dtype": "float32"
+    },
+    "vh": {
+      "crs": "EPSG:32634",
+      "pixel_spacing": [
+        10.0,
+        10.0
+      ],
+      "window": [
+        21230,
+        19362,
+        516,
+        516
+      ],
+      "transform": [
+        10.0,
+        0.0,
+        476430.0,
+        0.0,
+        -10.0,
+        6044990.0
+      ],
+      "nodata": -32768.0,
+      "dtype": "float32"
+    }
+  },
+  "valid_pixels": 262144,
+  "excluded_pixels": 0,
+  "resampling": "nearest neighbour to exact Sentinel-2 CRS/transform/shape; no speckle filtering",
+  "linear_ranges": {
+    "VV": [
+      0.006751593668013811,
+      0.8613353371620178
+    ],
+    "VH": [
+      0.002924056025221944,
+      0.22538445889949799
+    ]
+  },
+  "attempts": [
+    {
+      "scene_id": "S1A_IW_GRDH_1SDV_20250702T044406_20250702T044431_059900_0770BD_rtc",
+      "selected": true
+    }
+  ],
+  "paths": {
+    "linear": "lab2/data/sentinel1/bialowieza/gamma0_linear.tif",
+    "db": "lab2/data/sentinel1/bialowieza/gamma0_db.tif",
+    "mask": "lab2/data/sentinel1/bialowieza/valid_mask.tif",
+    "source_item": "lab2/data/sentinel1/bialowieza/source_item.json",
+    "candidates": "lab2/data/sentinel1/bialowieza/candidates.json"
+  }
+}
