@@ -1,9 +1,10 @@
 # Lab 3 — Bayes and kNN completion checklist
 
 Based on the supplied assignment, the previous Lab 2 conversation and the
-current repository. Phases 1–4 are complete, with verified inputs, fitted PDFs,
-scratch Bayes and kNN maps. Poor Bayes forest transfer and the small kNN changes
-with k are documented. Full model comparison and final submission checks remain pending.
+current repository. All six phases are complete: verified inputs, fitted PDFs,
+scratch Bayes/kNN maps, common-reference comparisons, final audits and a
+portable ZIP. Written conclusions cover poor Bayes forest transfer, small
+nonmonotonic k effects and evaluation limits.
 
 ## Current starting point and decisions
 
@@ -21,7 +22,7 @@ with k are documented. Full model comparison and final submission checks remain 
   [the Lab 2 submission review](../lab2/SUBMISSION_REVIEW.md).
 - [x] Create `lab3/` and this checklist.
 
-Planned baseline: reuse Sentinel-2 B04/B03/B02 **BOA reflectance** as each
+Implemented baseline: reuse Sentinel-2 B04/B03/B02 **BOA reflectance** as each
 pixel's three features, fit one multivariate Gaussian per class for Bayes,
 and implement Euclidean-distance kNN for k = 1, 3 and 5. Use the same training
 samples, feature transformation and test pixels for both methods. NumPy may
@@ -218,29 +219,46 @@ three prediction maps and the comparison figure under `lab3/results/knn/`.
 
 ## 5. Compare results and explain the effect of k — required discussion
 
+Completed in section 5 of [analysis.ipynb](analysis.ipynb), evaluating all four
+saved maps on the same 2,304 forest + 256 urban reference pixels.
+[Metrics](results/comparison/metrics.csv),
+[per-class precision/recall/F1](results/comparison/per_class_metrics.csv),
+[confusion matrices](results/comparison/confusion_matrices.png),
+[all-model maps](results/comparison/all_model_maps.png), paired changes and
+conclusions are saved. Balanced accuracy is 53.212% for Bayes, 99.674% for k =
+1/3 and 99.653% for k = 5. k = 1 → 3 changes no reference decisions; k = 3 → 5
+adds one forest-reference error. The notebook explains the PDF/neighbour
+assumptions, scaling, computational cost and the limits of sparse, correlated
+manual references. [Verification](results/comparison/verification.json) checks
+hand-calculated metrics, undefined denominators, independent raster recounts,
+common support, saved tables/arrays and paired-change identities.
+All 29 code cells passed a fresh-kernel run with saved outputs. Comparison
+figures and written conclusions were reviewed; see
+[phase5_review.json](results/comparison/phase5_review.json).
+
 The assignment requires results and observations; independent reference labels
 and the following compact measurements make those observations testable.
 
-- [ ] Evaluate Bayes and all three kNN variants on the **same independently
+- [x] Evaluate Bayes and all three kNN variants on the **same independently
   labelled test pixels**, excluding nodata and unlabelled/other-cover pixels.
   Report evaluated support per class and the limitation of partial references.
-- [ ] Present a confusion matrix with named axes and a small table containing
+- [x] Present a confusion matrix with named axes and a small table containing
   accuracy, per-class precision/recall and balanced accuracy or macro F1.
   Define how undefined metric denominators are handled.
-- [ ] Measure the fraction of valid test pixels whose predictions change
+- [x] Measure the fraction of valid test pixels whose predictions change
   from k = 1 to 3, 3 to 5 and 1 to 5; show a disagreement map or matched detail
   crop where it helps explain the changes.
-- [ ] Answer explicitly: what changed at **k = 1, k = 3 and k = 5** in the
+- [x] Answer explicitly: what changed at **k = 1, k = 3 and k = 5** in the
   observed class maps and metrics? Discuss isolated decisions, spectral
   outliers, preservation/loss of small features and majority-class effects
   only where supported by the results. Report small/no differences honestly.
-- [ ] Explain the expected trade-off: k = 1 is more sensitive to individual
+- [x] Explain the expected trade-off: k = 1 is more sensitive to individual
   samples; larger k aggregates more evidence but can bias ambiguous pixels.
   Do not claim accuracy must improve monotonically with k.
-- [ ] Compare Bayes' parametric PDF assumptions with kNN's sample-based
+- [x] Compare Bayes' parametric PDF assumptions with kNN's sample-based
   decisions, including training/prediction cost and feature scaling. Record
   training sample counts and, if comparing speed, comparable prediction timing.
-- [ ] Discuss limitations: manual label uncertainty, within-class diversity,
+- [x] Discuss limitations: manual label uncertainty, within-class diversity,
   spatial dependence, two-class coverage, acquisition/illumination differences
   and the risk that separate cities/forests encode scene-specific conditions.
   Conclusions apply to the evaluated imagery and reference areas.
@@ -250,28 +268,42 @@ and explicit answers to both assignment questions in the notebook.
 
 ## 6. Final notebook and submission checks — required
 
-- [ ] Check assignment coverage: training images/ROIs, histograms, fitted PDFs
+Notebook and artifact verification passed: **30/30 code cells** in a fresh
+kernel, 96 recorded source/result hashes, nine histogram exports, all four
+class maps, saved scores/neighbours and comparison reports. All 15 scientific
+figures and written answers were reviewed across the phase records. The
+portable payload passed the same audit from a relocated copy with network
+disabled. See [SUBMISSION_REVIEW.md](SUBMISSION_REVIEW.md),
+[results/submission_checks.json](results/submission_checks.json) and
+[results/notebook_review.json](results/notebook_review.json).
+The verified ZIP is `dist/MLForSpace-lab3-submission.zip`, built after saving
+notebook outputs and review records. It contains all three labs to retain
+source dependencies and navigation links, with 229 payload files and an
+extracted SHA-256 inventory. ZIP CRCs and extracted links pass. The ZIP and
+checksum/check companions remain local deliverables ignored by Git.
+
+- [x] Check assignment coverage: training images/ROIs, histograms, fitted PDFs
   and parameters, Bayes test and red/blue result, all kNN steps, three k maps
   and evidence-based comments on their differences.
-- [ ] Verify essential algorithm behaviour with small hand-checkable examples:
+- [x] Verify essential algorithm behaviour with small hand-checkable examples:
   Gaussian score/decision against manual calculation, known nearest neighbours
   and votes for each k, equal-distance handling and batch-size invariance.
   Check disjoint training/evaluation indices and unchanged test preprocessing.
-- [ ] Check mask/raster shape, class IDs, valid-pixel coverage, georeferencing,
+- [x] Check mask/raster shape, class IDs, valid-pixel coverage, georeferencing,
   colour legend, finite scores and confusion-matrix totals. Verify plots are
   readable, comparable and consistent with saved arrays/metrics.
-- [ ] Restart the notebook kernel, run all cells in order using the locked
+- [x] Restart the notebook kernel, run all cells in order using the locked
   project environment, resolve errors/hidden state and save all outputs.
-- [ ] Save seeds, ROI definitions, input/output hashes, model parameters,
+- [x] Save seeds, ROI definitions, input/output hashes, model parameters,
   feature scaling, sample counts, k values, implementation settings and package
   versions. Keep original data unchanged and temporary credentials out of files.
-- [ ] Finish `lab3/README.md` with exact run instructions, provenance,
+- [x] Finish `lab3/README.md` with exact run instructions, provenance,
   attribution, output locations and clearly stated reuse of earlier lab files.
   Reproduction with saved inputs should not need network access or credentials.
-- [ ] Review the notebook's written answers and figures; update this checklist
+- [x] Review the notebook's written answers and figures; update this checklist
   only when each item has corresponding evidence. Record verification results
   and remaining limitations in `lab3/SUBMISSION_REVIEW.md`.
-- [ ] Prepare a portable submission ZIP following the earlier labs' convention.
+- [x] Prepare a portable submission ZIP following the earlier labs' convention.
   Include the notebook, required local inputs (including referenced earlier-lab
   files), masks, implementation, outputs, docs and dependency lock files. Check
   it from a relocated copy; omit environments and caches.

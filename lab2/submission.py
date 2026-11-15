@@ -36,9 +36,9 @@ def sha256(path):
 
 
 def submission_files(root=ROOT):
-    """Include both labs so linked lab 1 provenance/report remains readable."""
+    """Include available labs so repository navigation/provenance links resolve."""
     files = [root / name for name in ("README.md", "pyproject.toml", "uv.lock", ".gitignore")]
-    for directory in ("lab1", "lab2"):
+    for directory in ("lab1", "lab2", "lab3"):
         files.extend(p for p in (root / directory).rglob("*")
                      if p.is_file() and not EXCLUDED.intersection(p.parts)
                      and not any(part.startswith(".") for part in p.relative_to(root).parts)

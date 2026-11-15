@@ -1,0 +1,7 @@
+method_from,method_to,valid_pixels,changed_pixels,changed_percent,forest_to_urban,urban_to_forest,changed_reference_pixels,reference_corrections,reference_new_errors,both_reference_correct,both_reference_wrong
+Bayes,kNN k=1,261648,146641,56.04514462178194,0,146641,2141,2141,0,404,15
+Bayes,kNN k=3,261648,148138,56.617287347887235,0,148138,2141,2141,0,404,15
+Bayes,kNN k=5,261648,147441,56.35089891762979,0,147441,2140,2140,0,404,16
+kNN k=1,kNN k=3,261648,2143,0.8190393200024461,323,1820,0,0,0,2545,15
+kNN k=3,kNN k=5,261648,781,0.2984926313214701,739,42,1,0,1,2544,15
+kNN k=1,kNN k=5,261648,1916,0.7322815385556167,558,1358,1,0,1,2544,15

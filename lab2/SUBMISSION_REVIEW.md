@@ -61,7 +61,8 @@ It produces `dist/MLForSpace-lab2-submission.zip` and verifies its CRCs and
 file hashes. The archive contains the main notebook and all local inputs,
 results, code, documentation and dependency files, plus the supporting lab 1
 files. Lab 1 is included in full to preserve its provenance links; lab 2 analyses
-only Kraków and Białowieża. `SUBMISSION_FILES.sha256` inside the archive lists
+only Kraków and Białowieża. Rebuilds also include `lab3/` when available to keep
+the repository README's navigation links valid. `SUBMISSION_FILES.sha256` inside the archive lists
 the exact included files and hashes. Environments, Git/editor metadata, caches
 and the ZIP itself are excluded.
 

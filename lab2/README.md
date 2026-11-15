@@ -218,11 +218,13 @@ From the repository root, create the portable archive:
 uv run python lab2/submission.py --package
 ```
 
-The output is `dist/MLForSpace-lab2-submission.zip`. It includes both labs, local
+The output is `dist/MLForSpace-lab2-submission.zip`. It includes the available labs, local
 inputs/results, code, documentation and dependency files, with CRC and file-hash
 verification. The included `SUBMISSION_FILES.sha256` inventory records the exact
-contents. Both labs are included to retain existing lab 1 provenance links;
-the lab 2 analysis uses only the selected urban–natural pair. Environments,
+contents. The earlier labs are included to retain existing lab 1 provenance links;
+the lab 2 analysis uses only the selected urban–natural pair. If `lab3/` is
+present, it is included so links in the repository-wide README also resolve
+after extraction. Environments,
 Git/editor metadata, hidden files and caches are excluded. The root `.gitignore`
 is included as a deliberate exception. See [SUBMISSION_REVIEW.md](SUBMISSION_REVIEW.md)
 for extraction and reproduction instructions.

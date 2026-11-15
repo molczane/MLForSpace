@@ -1,100 +1,105 @@
 # ML for Space
 
-- **Lab 3:** [analysis notebook](lab3/analysis.ipynb),
-  [data and reproduction instructions](lab3/README.md), and
-  [execution checklist](lab3/CHECKLIST.md). Labelled training data, an independent
-  test image, fitted Gaussian PDFs, scratch Bayes and kNN (k = 1, 3, 5) maps
-  are prepared, with observations and verification. Full model comparison
-  and final submission checks are pending.
-- **Lab 2:** [executed analysis notebook](lab2/analysis.ipynb),
-  [results and reproduction instructions](lab2/README.md), and
-  [submission review](lab2/SUBMISSION_REVIEW.md). Covers Sentinel-1/2
-  distributions, two-LSB replacement and compressive sensing.
-- **Lab 1:** [SVD report](lab1/results/svd/README.md) and
-  [executed notebook](lab1/algebra.ipynb).
+Three completed labs on satellite-image analysis. Start with the notebook for
+the lab you need; each notebook includes saved outputs and written conclusions.
+Reading results needs no Python environment, data download or credentials.
 
-## Lab 1 — Sentinel-2 SVD
+## Choose a lab
 
-This lab compares SVD reconstruction of three 512 × 512 satellite image crops at
-10 m per pixel: urban Kraków, Puszcza Białowieska forest and Baltic Sea water.
-It tests the largest singular values, omits the first ten at equal component
-counts, and selects ranks using explicit quality criteria and visual inspection.
+| Lab | Topic | Main notebook | Guide and results | Review |
+| --- | --- | --- | --- | --- |
+| 1 | SVD image reconstruction | [algebra.ipynb](lab1/algebra.ipynb) | [Input/reproduction guide](lab1/README.md) · [SVD report](lab1/results/svd/README.md) | [Acceptance measurements](lab1/results/svd/acceptance_results.csv) |
+| 2 | Sentinel-1/2 histograms, two-LSB replacement, compressive sensing | [analysis.ipynb](lab2/analysis.ipynb) | [Guide](lab2/README.md) · [Results](lab2/results/) | [Checklist](lab2/CHECKLIST.md) · [Submission review](lab2/SUBMISSION_REVIEW.md) |
+| 3 | Bayes and kNN forest–urban classification from scratch | [analysis.ipynb](lab3/analysis.ipynb) | [Guide](lab3/README.md) · [Comparison results](lab3/results/comparison/) | [Checklist](lab3/CHECKLIST.md) · [Submission review](lab3/SUBMISSION_REVIEW.md) |
 
-**Read the [complete report with figures and observations](lab1/results/svd/README.md).**
-The [executed notebook](lab1/algebra.ipynb) includes saved outputs. All small
-input crops, source metadata, plots and CSV measurements are included locally
-for the Git submission; the report can be read without running Python.
+## Results at a glance
 
-![Approved Sentinel-2 AOIs](lab1/data/sentinel2/comparison.png)
+- **Lab 1:** reconstructs Kraków, Białowieża and Baltic Sentinel-2 crops with SVD.
+  The selected ranks are 258, 251 and 175 under the lab's explicit numerical
+  and visual acceptance rule. See the [full report](lab1/results/svd/README.md)
+  for the leading/skip-ten comparison, quality curves and limitations.
+- **Lab 2:** compares optical and SAR distributions for Kraków/Białowieża,
+  replaces two low bits reproducibly and runs the optional compressive-sensing
+  example. Supplied solver failures and the corrected comparison are reported
+  explicitly. See the [submission review](lab2/SUBMISSION_REVIEW.md).
+- **Lab 3:** fits full Gaussian class PDFs and implements Bayes and exhaustive
+  kNN for k = 1, 3 and 5. On 2,560 sparse manual Tychy reference pixels,
+  balanced accuracy is 53.212% for Bayes, 99.674% for k = 1/3 and 99.653% for
+  k = 5. The [notebook](lab3/analysis.ipynb) explains poor Bayes forest transfer,
+  small nonmonotonic k effects and why these figures are not full-image or
+  general regional accuracy estimates.
 
-## Results
+## Find data, code and figures
 
-| AOI / terrain | Accepted k | Retained energy | PSNR | SSIM |
-| --- | ---: | ---: | ---: | ---: |
-| Kraków / urban | 258 | 99.97239% | 41.025 dB | 0.990135 |
-| Białowieża / forest | 251 | 99.98440% | 48.064 dB | 0.990112 |
-| Baltic / sea | 175 | 99.98210% | 50.066 dB | 0.990106 |
+| Location | Contents |
+| --- | --- |
+| [lab1/data/sentinel2/](lab1/data/sentinel2/) | Original small optical crops, display previews and provenance for Kraków, Białowieża and Baltic |
+| [lab1/results/svd/](lab1/results/svd/) | SVD reconstructions, quality plots, measurements and report |
+| [lab2/data/](lab2/data/) | Optical QA masks, matching Sentinel-1 crops and source manifest |
+| [lab2/results/](lab2/results/) | Histograms, LSB comparisons, compressive-sensing results and audit records |
+| [lab3/data/](lab3/data/) | Manual labels, exact training samples/scaling, independent Tychy crop and provenance |
+| [lab3/results/bayes/](lab3/results/bayes/) | Fitted Gaussian parameters/PDF plots; Bayes maps in `classification/` |
+| [lab3/results/knn/](lab3/results/knn/) | k = 1/3/5 maps, nearest-neighbour records and k-change evidence |
+| [lab3/results/comparison/](lab3/results/comparison/) | Common-reference metrics, confusion matrices and all-model comparison |
+| [pyproject.toml](pyproject.toml), [uv.lock](uv.lock) | Shared Python requirements and locked dependencies |
 
-Every integer rank from 1 to 512 was tested. Acceptance requires SSIM ≥ 0.99,
-PSNR ≥ 40 dB, and an informal assistant inspection of the full frame and enlarged
-detail crop. The selected ranks are the smallest satisfying that lab rule.
-Small differences remain in urban edges, canopy texture and subtle water texture;
-the report describes them. These are not human detection thresholds or universal
-terrain requirements. Acquisition dates and scene conditions differ.
+Lab 2 reuses Lab 1 optical data. Lab 3 reuses those crops and Lab 2 optical QA
+masks, then adds the independent Tychy scene. Keep the repository directory
+structure intact. `lab2/Basic_opt.ipynb` is the unchanged source tutorial; use
+`lab2/analysis.ipynb` for the completed Lab 2 submission.
 
-Skipping components 1–10 produced worse PSNR and SSIM at every tested equal-count
-comparison, because dominant brightness and spatial patterns were removed.
-High retained energy alone also proved misleading: rank-1 Kraków retains about
-96% of energy but has SSIM only 0.202. High visual fidelity can require enough
-components to remove the storage advantage of a simple SVD factorisation.
+## Run the notebooks
 
-## Reproduce
-
-Use Python 3.12 or later and [uv](https://docs.astral.sh/uv/).
-From the repository root:
+From the repository root, install the locked environment:
 
 ```sh
 uv sync --locked
-uv run python lab1/run_notebook.py
-uv run python lab1/verify_submission.py
 ```
 
-The SVD experiment reads the included grayscale PNGs and requires no remote
-image access or credentials. The notebook can also be opened in a notebook
-editor using this project's `.venv` interpreter and run from top to bottom.
-Execution recreates results and saves notebook outputs after a successful run.
-Local Jupyter execution needs permission to open loopback sockets.
-
-To reproduce image acquisition separately:
+Python 3.12 or later is required by the project. Select the resulting `.venv`
+interpreter in your notebook editor, restart the kernel and run the desired
+notebook from top to bottom. Lab 2 and Lab 3 support working directories at the
+repository root or their own lab directory. Lab 1 also has a runner:
 
 ```sh
-uv run python lab1/prepare_sentinel2.py
+uv run python lab1/run_notebook.py
 ```
 
-This verifies and reuses the saved crops by default. `--refresh` queries the
-public archive again and requires network access. If refreshed imagery changes,
-repeat visual inspection and update `lab1/visual_review.json`; its hashes prevent
-silently reusing the previous acceptance notes with different inputs.
+Saved crops permit offline analysis without private credentials. Installing
+uncached packages or intentionally repeating imagery acquisition needs network
+access; exact acquisition options and source details are in each lab's guide.
 
-## Files and method
+## Verify saved artifacts
 
-- [Lab instructions, AOIs and acquisition details](lab1/README.md)
-- [Executed notebook](lab1/algebra.ipynb)
-- [Complete report](lab1/results/svd/README.md)
-- [Accepted ranks, metrics and visual notes](lab1/results/svd/acceptance_results.csv)
-- [All 1,536 dense rank measurements](lab1/results/svd/refined_metrics.csv)
-- [Equal-count leading / skip-ten comparisons](lab1/results/svd/skip10_metrics.csv)
-- [Source images, metadata and AOI footprints](lab1/data/sentinel2/)
-- [Run settings, package versions and input hashes](lab1/results/svd/run_metadata.json)
+After notebook execution, the following commands audit saved files:
 
-Analysis uses display grayscale images, uncentered float64 SVD, and unrounded,
-unclipped reconstruction metrics. PSNR and SSIM use a common `data_range=255`;
-SSIM uses a 7 × 7 uniform window with sample covariance. All grayscale displays
-use fixed 0–255 limits. Signed residual and amplified error diagnostics are
-labelled separately. Full-rank recovery and the omitted-energy error identities
-are verified during execution.
+```sh
+uv run python lab1/verify_submission.py
+uv run python lab2/submission.py
+uv run python lab3/submission.py
+```
 
-Sentinel-2 Level-2A Collection 1 imagery: Kraków 2025-08-13, Białowieża 2025-07-02,
-Baltic 2025-08-19. Contains modified Copernicus Sentinel data 2025, accessed
-through [Element 84 Earth Search](https://github.com/Element84/earth-search).
-Exact scene identifiers and asset URLs are preserved with each input crop.
+Lab 3's final notebook section also checks a relocated portable copy with
+network access disabled. Read [its submission review](lab3/SUBMISSION_REVIEW.md)
+for verification scope and the remaining scientific limitations.
+
+## Build portable submissions
+
+Run from the repository root after saving notebook outputs:
+
+```sh
+uv run python lab2/submission.py --package
+uv run python lab3/submission.py --package
+```
+
+Outputs are `dist/MLForSpace-lab2-submission.zip` and
+`dist/MLForSpace-lab3-submission.zip`. The Lab 3 archive includes all three labs
+so earlier-lab data dependencies and documentation links remain available.
+Archives include per-file SHA-256 inventories and exclude environments, caches,
+editor/Git metadata and the `dist/` directory. ZIPs are local deliverables,
+ignored by Git; rebuild after changes. Extraction/run instructions are in the
+corresponding submission reviews.
+
+Contains modified Copernicus Sentinel data 2025. Acquisition providers,
+processing details, timestamps and attribution are preserved in the
+[Lab 1](lab1/README.md), [Lab 2](lab2/README.md) and [Lab 3](lab3/README.md) guides.

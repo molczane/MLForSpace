@@ -1,0 +1,9 @@
+method,reference_class,predicted_forest,predicted_urban,support
+Bayes,forest,148,2156,2304
+Bayes,urban,0,256,256
+kNN k=1,forest,2289,15,2304
+kNN k=1,urban,0,256,256
+kNN k=3,forest,2289,15,2304
+kNN k=3,urban,0,256,256
+kNN k=5,forest,2288,16,2304
+kNN k=5,urban,0,256,256

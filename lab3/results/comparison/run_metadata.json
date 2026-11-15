@@ -1,0 +1,65 @@
+{
+  "phase": 5,
+  "source": "tychy",
+  "scene_id": "S2C_T34UCA_20250814T095058_L2A",
+  "evaluation": "same QA-valid, manually labelled Tychy pixels for every method",
+  "reference_support": {
+    "forest": 2304,
+    "urban": 256
+  },
+  "reference_pixels": 2560,
+  "valid_pixels": 261648,
+  "valid_but_unlabelled_pixels": 259088,
+  "reference_coverage_percent": 0.9784137467131413,
+  "main_metric": "balanced_accuracy",
+  "other_metrics": [
+    "accuracy",
+    "per-class precision",
+    "per-class recall",
+    "per-class F1",
+    "macro F1"
+  ],
+  "zero_denominator_rule": "undefined/None/null/empty; no class omitted silently from macro averages",
+  "confusion_axes": {
+    "rows": "reference class",
+    "columns": "predicted class",
+    "class_order": [
+      "forest",
+      "urban"
+    ]
+  },
+  "methods": [
+    "Bayes",
+    "kNN k=1",
+    "kNN k=3",
+    "kNN k=5"
+  ],
+  "training_samples": 1024,
+  "samples_per_class": 512,
+  "feature_count": 3,
+  "parameter_tuning_from_comparison": false,
+  "empirical_speed_benchmark": false,
+  "k_change_visualization": "lab3/results/knn/tychy_knn_changes.png",
+  "input_hashes": {
+    "lab3/evaluation.py": "f6e89f09f756ae964fbbcbf98e70626bdfc574ff94b04d7829d2877d9c6bf8af",
+    "lab3/rois.json": "e78f2e37ae167a3790c3beb79e4d9a2948bea25a4d4e58c2469fd232c4d7c661",
+    "lab3/data/training_samples.npz": "0f8a0ebe5310ef654c12a8954c6b6c1856933bd458143d6a90b57bb646d30ce3",
+    "lab3/data/scaling.json": "884b66550a3f7a8c672d49ec105159a44fc1513d6af67abfdbf2dea49733ec6d",
+    "lab3/data/labels/tychy/test_labels.tif": "3cd12a56ec6ed0ae037e8f31a41bf091d65af9f86b2ecd45e099c36698c6095b",
+    "lab3/data/labels/tychy/valid_mask.tif": "3fdf18768a7b7a34ca7fffa4a99c3e34115d529a29b4b79692a1afcdabb78129",
+    "lab3/results/knn/k_change_counts.csv": "7ffc1c9e7bc1545c418e6d8f74d72c9f6e5331f172e495f661efa789525c4e9b",
+    "lab3/results/knn/tychy_knn_changes.png": "d6d52c7cb57697bfc7b61908835c9206ceb67e3859fd37f1fd2765a16b599beb",
+    "lab3/results/knn/tychy_knn_details.png": "da84dd05320b3a28cba4b0290bc2c8e571623f752f5249456523c56086c39849",
+    "lab3/results/bayes/classification/tychy_bayes_classes.tif": "12303041b6fcf882f8cb50285321da7b30674612616678f04201633aa7cc805d",
+    "lab3/results/knn/tychy_knn_k1_classes.tif": "7d91d2d81945a34e7ffa93d91c766ebebc1efbaa97e6ab5059236abb7e6dacbf",
+    "lab3/results/knn/tychy_knn_k3_classes.tif": "af979282085063d776bbc4c0df475d1857eee9a168065ba6c556a7a3fc48b0e1",
+    "lab3/results/knn/tychy_knn_k5_classes.tif": "90761e376f090289bbd94ef67a6740c73bb487ba093ca4bb045aaf002e329fc6"
+  },
+  "versions": {
+    "numpy": "2.5.4",
+    "rasterio": "1.5.2",
+    "pillow": "13.0.0",
+    "matplotlib": "3.11.2",
+    "scipy": "1.18.1"
+  }
+}

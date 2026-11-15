@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "artifacts": {
+    "status": "passed",
+    "recorded_hashes": 96,
+    "training_samples": 1024,
+    "histogram_exports": 9,
+    "classified_valid_pixels": 261648,
+    "nodata_pixels": 496,
+    "bayes_full_image_prediction": "passed",
+    "knn_saved_distances_and_votes": "passed",
+    "independent_knn_queries": 128,
+    "prediction_rasters": 4,
+    "reference_pixels": 2560,
+    "comparison_reports": 4,
+    "scientific_figures_decoded": 15,
+    "local_documentation_links": 145,
+    "saved_data_need_credentials": false
+  },
+  "relocated": {
+    "status": "passed",
+    "network_disabled": true,
+    "fresh_module_paths": true,
+    "scope": "saved-artifact/source audit; notebook execution reviewed separately through IDE",
+    "files_copied": 229,
+    "artifact_summary": {
+      "status": "passed",
+      "recorded_hashes": 96,
+      "training_samples": 1024,
+      "histogram_exports": 9,
+      "classified_valid_pixels": 261648,
+      "nodata_pixels": 496,
+      "bayes_full_image_prediction": "passed",
+      "knn_saved_distances_and_votes": "passed",
+      "independent_knn_queries": 128,
+      "prediction_rasters": 4,
+      "reference_pixels": 2560,
+      "comparison_reports": 4,
+      "scientific_figures_decoded": 15,
+      "local_documentation_links": 145,
+      "saved_data_need_credentials": false
+    }
+  },
+  "notebook_execution_review": "results/notebook_review.json",
+  "scope": "Saved artifacts and relocated source/data audit; full notebook execution is reviewed through IDE.",
+  "verification_implementation_sha256": "e7453c78fde6c53a4c421e26385355b261aca7646b9f3975a7104896a0812e1f"
+}

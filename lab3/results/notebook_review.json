@@ -1,0 +1,301 @@
+{
+  "status": "passed",
+  "notebook": "lab3/analysis.ipynb",
+  "execution_method": "IDE fresh-kernel sequential Run All",
+  "code_cell_count": 30,
+  "cells": [
+    {
+      "id": "6dd3d7df7417cc8",
+      "status": "STOPPED_OK",
+      "execution_count": 1
+    },
+    {
+      "id": "35e6cc3a2ad13bec",
+      "status": "STOPPED_OK",
+      "execution_count": 2
+    },
+    {
+      "id": "8d196aeab8d4e7a9",
+      "status": "STOPPED_OK",
+      "execution_count": 3
+    },
+    {
+      "id": "203452e93c843a6d",
+      "status": "STOPPED_OK",
+      "execution_count": 4
+    },
+    {
+      "id": "97aad276a19f58af",
+      "status": "STOPPED_OK",
+      "execution_count": 5
+    },
+    {
+      "id": "b8266f2a94b8d654",
+      "status": "STOPPED_OK",
+      "execution_count": 6
+    },
+    {
+      "id": "df47d99d4b49125d",
+      "status": "STOPPED_OK",
+      "execution_count": 7
+    },
+    {
+      "id": "5919582dd1ff04cc",
+      "status": "STOPPED_OK",
+      "execution_count": 8
+    },
+    {
+      "id": "fc783f3262ce78a2",
+      "status": "STOPPED_OK",
+      "execution_count": 9
+    },
+    {
+      "id": "9f1490158b6d4cf0",
+      "status": "STOPPED_OK",
+      "execution_count": 10
+    },
+    {
+      "id": "11b357c557e75d64",
+      "status": "STOPPED_OK",
+      "execution_count": 11
+    },
+    {
+      "id": "bbfb22b393a9644b",
+      "status": "STOPPED_OK",
+      "execution_count": 12
+    },
+    {
+      "id": "1e88a90b785be84a",
+      "status": "STOPPED_OK",
+      "execution_count": 13
+    },
+    {
+      "id": "deb6a951a56b8da5",
+      "status": "STOPPED_OK",
+      "execution_count": 14
+    },
+    {
+      "id": "265d6304412e63d8",
+      "status": "STOPPED_OK",
+      "execution_count": 15
+    },
+    {
+      "id": "af7735055fa79ea2",
+      "status": "STOPPED_OK",
+      "execution_count": 16
+    },
+    {
+      "id": "b2d8ba06200a0ce7",
+      "status": "STOPPED_OK",
+      "execution_count": 17
+    },
+    {
+      "id": "f5c4f9809cdb8ff4",
+      "status": "STOPPED_OK",
+      "execution_count": 18
+    },
+    {
+      "id": "3c326121e44d5fc5",
+      "status": "STOPPED_OK",
+      "execution_count": 19
+    },
+    {
+      "id": "21a7beba335be763",
+      "status": "STOPPED_OK",
+      "execution_count": 20
+    },
+    {
+      "id": "148463f409c2feaa",
+      "status": "STOPPED_OK",
+      "execution_count": 21
+    },
+    {
+      "id": "acdcc746dd90912d",
+      "status": "STOPPED_OK",
+      "execution_count": 22
+    },
+    {
+      "id": "25c851d12a925c82",
+      "status": "STOPPED_OK",
+      "execution_count": 23
+    },
+    {
+      "id": "40b29448312efbd6",
+      "status": "STOPPED_OK",
+      "execution_count": 24
+    },
+    {
+      "id": "8204d7ca5dc4ab22",
+      "status": "STOPPED_OK",
+      "execution_count": 25
+    },
+    {
+      "id": "5b5d4dfc511528f9",
+      "status": "STOPPED_OK",
+      "execution_count": 26
+    },
+    {
+      "id": "a1a04cb0c2c91eb6",
+      "status": "STOPPED_OK",
+      "execution_count": 27
+    },
+    {
+      "id": "3c9d6145c3b15487",
+      "status": "STOPPED_OK",
+      "execution_count": 28
+    },
+    {
+      "id": "1bc0950275726aaf",
+      "status": "STOPPED_OK",
+      "execution_count": 29
+    },
+    {
+      "id": "e7b9452ff631d312",
+      "status": "STOPPED_OK",
+      "execution_count": 30
+    }
+  ],
+  "source_cells_reviewed": [
+    {
+      "id": "6dd3d7df7417cc8",
+      "lines": 12
+    },
+    {
+      "id": "35e6cc3a2ad13bec",
+      "lines": 4
+    },
+    {
+      "id": "8d196aeab8d4e7a9",
+      "lines": 12
+    },
+    {
+      "id": "203452e93c843a6d",
+      "lines": 8
+    },
+    {
+      "id": "97aad276a19f58af",
+      "lines": 4
+    },
+    {
+      "id": "b8266f2a94b8d654",
+      "lines": 11
+    },
+    {
+      "id": "df47d99d4b49125d",
+      "lines": 7
+    },
+    {
+      "id": "5919582dd1ff04cc",
+      "lines": 57
+    },
+    {
+      "id": "fc783f3262ce78a2",
+      "lines": 39
+    },
+    {
+      "id": "9f1490158b6d4cf0",
+      "lines": 60
+    },
+    {
+      "id": "11b357c557e75d64",
+      "lines": 20
+    },
+    {
+      "id": "bbfb22b393a9644b",
+      "lines": 78
+    },
+    {
+      "id": "1e88a90b785be84a",
+      "lines": 78
+    },
+    {
+      "id": "deb6a951a56b8da5",
+      "lines": 32
+    },
+    {
+      "id": "265d6304412e63d8",
+      "lines": 19
+    },
+    {
+      "id": "af7735055fa79ea2",
+      "lines": 39
+    },
+    {
+      "id": "b2d8ba06200a0ce7",
+      "lines": 30
+    },
+    {
+      "id": "f5c4f9809cdb8ff4",
+      "lines": 43
+    },
+    {
+      "id": "3c326121e44d5fc5",
+      "lines": 80
+    },
+    {
+      "id": "21a7beba335be763",
+      "lines": 27
+    },
+    {
+      "id": "148463f409c2feaa",
+      "lines": 18
+    },
+    {
+      "id": "acdcc746dd90912d",
+      "lines": 32
+    },
+    {
+      "id": "25c851d12a925c82",
+      "lines": 28
+    },
+    {
+      "id": "40b29448312efbd6",
+      "lines": 17
+    },
+    {
+      "id": "8204d7ca5dc4ab22",
+      "lines": 91
+    },
+    {
+      "id": "5b5d4dfc511528f9",
+      "lines": 48
+    },
+    {
+      "id": "a1a04cb0c2c91eb6",
+      "lines": 31
+    },
+    {
+      "id": "3c9d6145c3b15487",
+      "lines": 40
+    },
+    {
+      "id": "1bc0950275726aaf",
+      "lines": 85
+    },
+    {
+      "id": "e7b9452ff631d312",
+      "lines": 10
+    }
+  ],
+  "written_answer_sections_reviewed": [
+    "f20ac9ad05cc25bd",
+    "f72a1f6fad53260b",
+    "cb932a8e6ed24fe3",
+    "ab5953359c2f6d9d",
+    "60da588728593f45",
+    "ee0dafa301c8efc4",
+    "a7b19e8ec4708ef",
+    "f022b670db150515",
+    "8b837d677386b109",
+    "ff51584b17aa1210"
+  ],
+  "scientific_figures_reviewed": 15,
+  "environment": "uv sync --locked --offline: 66 packages resolved, 62 installed packages checked",
+  "artifact_audit": "lab3/results/submission_checks.json",
+  "scope": "Complete notebook execution and source/written/figure review; saved-artifact audit repeated on relocated copy with fresh module paths and network disabled.",
+  "scientific_limitations": "Poor Bayes forest transfer remains explicit. Sparse manual, spatially correlated references do not establish full-image/regional accuracy or an optimal k.",
+  "notebook_sha256": "21aba09ef051dd4798c868705374f2752faf65c99717ebbd9e640c1872d7563f",
+  "portable_archive": "dist/MLForSpace-lab3-submission.zip",
+  "archive_validation": "CRC, extracted per-file SHA-256 inventory and local links; companion record in dist/",
+  "repository_navigation": "Root README covers all three labs; both archive builders include available labs."
+}

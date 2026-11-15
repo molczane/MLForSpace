@@ -1,0 +1,182 @@
+{
+  "Bayes": {
+    "confusion": [
+      [
+        148,
+        2156
+      ],
+      [
+        0,
+        256
+      ]
+    ],
+    "per_class": [
+      {
+        "label": 0,
+        "class_name": "forest",
+        "support": 2304,
+        "predicted_support": 148,
+        "tp": 148,
+        "fp": 0,
+        "fn": 2156,
+        "precision": 1.0,
+        "recall": 0.0642361111111111,
+        "f1": 0.12071778140293637
+      },
+      {
+        "label": 1,
+        "class_name": "urban",
+        "support": 256,
+        "predicted_support": 2412,
+        "tp": 256,
+        "fp": 2156,
+        "fn": 0,
+        "precision": 0.10613598673300166,
+        "recall": 1.0,
+        "f1": 0.191904047976012
+      }
+    ],
+    "summary": {
+      "evaluated_pixels": 2560,
+      "correct_pixels": 404,
+      "accuracy": 0.1578125,
+      "balanced_accuracy": 0.5321180555555556,
+      "macro_f1": 0.15631091468947417
+    }
+  },
+  "kNN k=1": {
+    "confusion": [
+      [
+        2289,
+        15
+      ],
+      [
+        0,
+        256
+      ]
+    ],
+    "per_class": [
+      {
+        "label": 0,
+        "class_name": "forest",
+        "support": 2304,
+        "predicted_support": 2289,
+        "tp": 2289,
+        "fp": 0,
+        "fn": 15,
+        "precision": 1.0,
+        "recall": 0.9934895833333334,
+        "f1": 0.9967341606792945
+      },
+      {
+        "label": 1,
+        "class_name": "urban",
+        "support": 256,
+        "predicted_support": 271,
+        "tp": 256,
+        "fp": 15,
+        "fn": 0,
+        "precision": 0.9446494464944649,
+        "recall": 1.0,
+        "f1": 0.9715370018975332
+      }
+    ],
+    "summary": {
+      "evaluated_pixels": 2560,
+      "correct_pixels": 2545,
+      "accuracy": 0.994140625,
+      "balanced_accuracy": 0.9967447916666667,
+      "macro_f1": 0.9841355812884138
+    }
+  },
+  "kNN k=3": {
+    "confusion": [
+      [
+        2289,
+        15
+      ],
+      [
+        0,
+        256
+      ]
+    ],
+    "per_class": [
+      {
+        "label": 0,
+        "class_name": "forest",
+        "support": 2304,
+        "predicted_support": 2289,
+        "tp": 2289,
+        "fp": 0,
+        "fn": 15,
+        "precision": 1.0,
+        "recall": 0.9934895833333334,
+        "f1": 0.9967341606792945
+      },
+      {
+        "label": 1,
+        "class_name": "urban",
+        "support": 256,
+        "predicted_support": 271,
+        "tp": 256,
+        "fp": 15,
+        "fn": 0,
+        "precision": 0.9446494464944649,
+        "recall": 1.0,
+        "f1": 0.9715370018975332
+      }
+    ],
+    "summary": {
+      "evaluated_pixels": 2560,
+      "correct_pixels": 2545,
+      "accuracy": 0.994140625,
+      "balanced_accuracy": 0.9967447916666667,
+      "macro_f1": 0.9841355812884138
+    }
+  },
+  "kNN k=5": {
+    "confusion": [
+      [
+        2288,
+        16
+      ],
+      [
+        0,
+        256
+      ]
+    ],
+    "per_class": [
+      {
+        "label": 0,
+        "class_name": "forest",
+        "support": 2304,
+        "predicted_support": 2288,
+        "tp": 2288,
+        "fp": 0,
+        "fn": 16,
+        "precision": 1.0,
+        "recall": 0.9930555555555556,
+        "f1": 0.9965156794425087
+      },
+      {
+        "label": 1,
+        "class_name": "urban",
+        "support": 256,
+        "predicted_support": 272,
+        "tp": 256,
+        "fp": 16,
+        "fn": 0,
+        "precision": 0.9411764705882353,
+        "recall": 1.0,
+        "f1": 0.9696969696969697
+      }
+    ],
+    "summary": {
+      "evaluated_pixels": 2560,
+      "correct_pixels": 2544,
+      "accuracy": 0.99375,
+      "balanced_accuracy": 0.9965277777777778,
+      "macro_f1": 0.9831063245697392
+    }
+  }
+}

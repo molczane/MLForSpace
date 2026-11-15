@@ -1,6 +1,6 @@
 # Lab 3 — Bayes and kNN forest–urban classification
 
-**Phases 1–4 are complete** in [analysis.ipynb](analysis.ipynb), with saved outputs.
+**All six phases are complete** in [analysis.ipynb](analysis.ipynb), with saved outputs.
 The notebook verifies the imagery, shows labelled ROIs and enlarged reference
 chips, saves reproducible training samples, and fits training-only feature
 scaling. It also fits full Gaussian class PDFs, plots their marginals against
@@ -8,9 +8,10 @@ training histograms, and applies a scratch Bayes classifier to Tychy. The maps
 and reserved references show poor forest transfer (148/2,304 correct forest
 pixels); numerical correctness does not imply model accuracy. Scratch kNN maps
 for k = 1, 3 and 5 use the same inputs and have much higher agreement on these
-sparse references. Full model comparison and final submission checks (phases
-5–6) remain pending.
-See [CHECKLIST.md](CHECKLIST.md) for the next execution phases.
+sparse references. The common-reference comparison reports all four methods'
+confusion matrices, metrics and k effects, with written limits. Final submission
+review and packaging (phase 6) are documented below and in the submission review.
+See [CHECKLIST.md](CHECKLIST.md) for the completed work and its evidence.
 
 ## Inputs and references
 
@@ -279,7 +280,109 @@ All **25 code cells** (phases 1–4) passed a fresh-kernel run with saved output
 Three kNN figures and written observations were reviewed; see
 [phase4_review.json](results/knn/phase4_review.json).
 
-## Reproduce completed phases
+## Phase 5 — common-reference comparison and conclusions
+
+All four saved prediction rasters are evaluated on **exactly the same 2,560
+QA-valid reference pixels**: 2,304 forest and 256 urban. Unlabelled/other-cover
+and nodata pixels are excluded. A method missing a prediction would fail
+validation rather than change its evaluation support. These sparse manual
+references cover about **0.98%** of valid Tychy pixels.
+
+| Method | Accuracy | Balanced accuracy | Macro F1 |
+| --- | ---: | ---: | ---: |
+| Bayes | 15.781% | 53.212% | 15.631% |
+| kNN k = 1 | 99.414% | 99.674% | 98.414% |
+| kNN k = 3 | 99.414% | 99.674% | 98.414% |
+| kNN k = 5 | 99.375% | 99.653% | 98.311% |
+
+Balanced accuracy is the main descriptive metric because reference support is
+9:1. [evaluation.py](evaluation.py) calculates confusion counts and per-class
+precision/recall/F1 directly. Zero denominators are undefined (None/null/empty),
+and macro averages are undefined if either required class value is undefined.
+The current Tychy reports have no undefined values. Confusion matrices use
+**reference rows and prediction columns**, with forest first.
+
+![Common-reference confusion matrices](results/comparison/confusion_matrices.png)
+
+The Bayes model recalls every labelled urban pixel but labels 2,156 forest
+references urban; its urban precision is only **10.614%**. kNN k = 1/3 makes
+15 forest-reference errors, and k = 5 makes 16. kNN agrees much more often with
+these references, but that conclusion does not extend automatically to all
+pixels, urban materials, seasons or geographic areas.
+
+k = 1 → 3 changes **2,143 valid predictions (0.819%)** and **no reference
+decisions**. k = 3 → 5 changes **781 (0.298%)**, introducing **one new forest
+reference error** and correcting none. k = 1 → 5 changes **1,916 (0.732%)**,
+with the same single added reference error. The notebook separates prediction
+changes from corrections, explains a concrete urban → forest → urban spectral
+vote reversal, and discusses modest map differences, sample sensitivity, local
+majorities and the absence of a uniform spatial smoothing effect. There is no
+evidence here for declaring one k universally optimal.
+
+The written comparison explains Gaussian PDF assumptions versus sample-based
+voting, the role of shared feature scaling and implementation cost. With N =
+1,024, d = 3 and C = 2, Gaussian prediction uses cached factors at O(Cd²) work
+per query, while this exhaustive kNN implementation computes distances and a
+full stable sort at O(Nd + N log N). One search serves all k values. No elapsed
+time or speedup benchmark is claimed.
+
+Outputs under `results/comparison/` include:
+
+- [Summary metrics](results/comparison/metrics.csv),
+  [per-class metrics](results/comparison/per_class_metrics.csv),
+  [confusion counts](results/comparison/confusion_matrices.csv), and
+  [reports.json](results/comparison/reports.json).
+- Confusion figure and [all-model maps](results/comparison/all_model_maps.png);
+  the earlier [k-change overlay](results/knn/tychy_knn_changes.png) and detail
+  figures supply the spatial evidence.
+- [Pairwise changes](results/comparison/pairwise_changes.csv),
+  [spectral vote examples](results/comparison/k_change_examples.csv), and
+  `evaluation_pixels.npz` with exact common pixel IDs, labels and predictions.
+- [Run metadata](results/comparison/run_metadata.json) and
+  [verification](results/comparison/verification.json): hand-calculated metrics,
+  undefined cases, independent confusion recounts from saved rasters, common
+  support, paired-change identities and lossless table/array readback.
+
+The notebook explicitly limits its conclusions because references are manual,
+selected for clear interiors, sparse and spatially correlated; class is
+confounded with training geography/date, and the binary model cannot validate
+other land covers. No model, ROI or k was retuned using comparison results.
+
+All **29 code cells** (phases 1–5) passed a fresh-kernel run with saved outputs.
+The comparison figures and conclusions were reviewed; see
+[phase5_review.json](results/comparison/phase5_review.json).
+
+## Final verification and portable submission
+
+The complete notebook has **30 code cells**, including a final saved-artifact
+audit and a relocated-copy audit with network disabled. The final execution
+and visual/written review are recorded in
+[results/notebook_review.json](results/notebook_review.json), with numerical
+outcomes in [results/submission_checks.json](results/submission_checks.json).
+See [SUBMISSION_REVIEW.md](SUBMISSION_REVIEW.md) for assignment coverage and
+the precise verification scope. A passing audit does not remove the scientific
+limitations or the poor Bayes forest-transfer result.
+
+After saving final notebook outputs, build the portable ZIP from the repository
+root:
+
+```sh
+uv run python lab3/submission.py --package
+```
+
+This produces `dist/MLForSpace-lab3-submission.zip`, plus checksum and archive
+check companions. The ZIP includes all three labs, their local inputs/results,
+code and documentation, `pyproject.toml` and `uv.lock`, preserving cross-lab
+links. It excludes environments, caches, Git/editor metadata and `dist/`.
+The builder checks CRCs, every included file's SHA-256 and extracted links.
+
+Extract into a new directory, enter `MLForSpace-lab3/`, run `uv sync --locked`
+and open `lab3/analysis.ipynb` with the resulting `.venv` kernel. The saved
+data and analysis need no credentials/network; dependency installation needs
+a package cache or network. The ZIP is a local deliverable ignored by Git;
+rebuild it after any submission-file changes.
+
+## Reproduce the notebook
 
 From the repository root:
 
@@ -316,10 +419,11 @@ separation reduces local leakage without proving statistical independence.
 These data do not establish general land-cover accuracy.
 
 Water, fields and uncertain pixels remain unlabelled for evaluation, although
-later binary classifiers will force forest/urban decisions on every valid
+the binary classifiers force forest/urban decisions on every valid
 pixel. Report metrics only against the saved reference labels, with support
 per class. The class PDFs, Bayes and three kNN maps are now available.
-Full common-model comparisons belong to phase 5; final packaging belongs to phase 6.
+The common-reference comparison is complete; final verification and packaging
+are documented in [SUBMISSION_REVIEW.md](SUBMISSION_REVIEW.md).
 
 Contains modified Copernicus Sentinel data 2025, accessed through Element 84
 Earth Search. Earlier inputs retain their [Lab 1 provenance](../lab1/README.md).

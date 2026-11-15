@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "methods": 4,
+  "common_reference_pixels": 2560,
+  "support": [
+    2304,
+    256
+  ],
+  "hand_calculated_metrics": "passed",
+  "undefined_denominators_and_absent_class": "passed",
+  "independent_confusion_from_saved_rasters": "passed",
+  "lossless_evaluation_pixel_readback": "passed",
+  "csv_json_readback": "passed",
+  "paired_change_conservation": "passed",
+  "saved_neighbor_voting_examples": "passed",
+  "figures_decoded": 2,
+  "output_sha256": {
+    "lab3/results/comparison/all_model_maps.png": "9f11126f9d60082eb22fd24cc2196c9afcedd26127bbf37ee8dceddb7f67e460",
+    "lab3/results/comparison/confusion_matrices.csv": "13bd2f3ee606feb46456234ec6513e80c15fdce12e037ddcafbe13da390408bb",
+    "lab3/results/comparison/confusion_matrices.png": "895c2bb1305ae64b859754372f5c4310996e57f3cd62ae3636a46381362e31a4",
+    "lab3/results/comparison/evaluation_pixels.npz": "82a0e58b70d629c0003e23702ee22a007a092af914a02f7bb8ff0c89139ec009",
+    "lab3/results/comparison/k_change_examples.csv": "6b586c73a11262348da3b7d2a956c62efb1828f05510cbf07615cecde5f9bc96",
+    "lab3/results/comparison/metrics.csv": "83ea92c1b6cf7285f2ba9adfcea5c7befc94e9c3dbdb8e883bf58ebf710aaa0f",
+    "lab3/results/comparison/pairwise_changes.csv": "fa74f7bd8591d443cc024ba7ebaef4e59d9b825027e8eb485d919259d06c0554",
+    "lab3/results/comparison/per_class_metrics.csv": "8f0f80ab7f713b3fd200ca4e1deb6a26d3ebe50fb3bc3d18a066054fc4430fa0",
+    "lab3/results/comparison/reports.json": "8699810899ee6ba7e577f3a93b9478722de5da10827182aafd91b907711f2130",
+    "lab3/results/comparison/run_metadata.json": "274599621ff60fc0403145a2c774d535c68eed93bda012ae11a9786eb76ff412"
+  }
+}
