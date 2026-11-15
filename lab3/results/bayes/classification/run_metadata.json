@@ -1,0 +1,80 @@
+{
+  "phase": 3,
+  "source": "tychy",
+  "scene_id": "S2C_T34UCA_20250814T095058_L2A",
+  "acquired_utc": "2025-08-14T09:57:04.138000Z",
+  "band_order": [
+    "B04",
+    "B03",
+    "B02"
+  ],
+  "model": "full Gaussian Bayes",
+  "priors": [
+    0.5,
+    0.5
+  ],
+  "regularization_scaled": 1e-06,
+  "class_ids": {
+    "forest": 0,
+    "urban": 1,
+    "nodata": 255
+  },
+  "colors": {
+    "forest": "red",
+    "urban": "blue",
+    "nodata": "transparent"
+  },
+  "exact_tie_rule": "smaller class ID; no tolerance",
+  "score_space": "standardized features",
+  "score_definition": "log p(z|class) + log prior; not normalized posterior probabilities",
+  "batch_size": 8192,
+  "detail_boxes_xyxy": {
+    "Industrial–canopy boundary": [
+      310,
+      215,
+      410,
+      315
+    ],
+    "Housing, trees and forest edge": [
+      0,
+      0,
+      180,
+      180
+    ]
+  },
+  "valid_pixels": 261648,
+  "map_counts": {
+    "forest": 10487,
+    "urban": 251161,
+    "nodata": 496
+  },
+  "test_reference_confusion_rows_truth_columns_prediction": [
+    [
+      148,
+      2156
+    ],
+    [
+      0,
+      256
+    ]
+  ],
+  "reference_support": 2560,
+  "reference_used_to_tune_model": false,
+  "input_hashes": {
+    "lab3/bayes.py": "b41e24486db9fe8a92499fd181cab4dc69a3c08952b254f6776566f463afcaa4",
+    "lab3/results/bayes/gaussian_model.npz": "156d317104987526e842eb93400a96b37d3dd7e42e953df20ad18a1c3539abd3",
+    "lab3/results/bayes/gaussian_model.json": "f2c4b9f719550555c767d661d2feccfb4d29c8ae1bc8476582f7ebf22aa53f75",
+    "lab3/data/manifest.json": "0788ce0dcfb0a8e047d6d7175a3d38be9c8c72db3821d5f4f0ae5f58b2f92a81",
+    "lab3/data/scaling.json": "884b66550a3f7a8c672d49ec105159a44fc1513d6af67abfdbf2dea49733ec6d",
+    "lab3/data/labels/tychy/test_labels.tif": "3cd12a56ec6ed0ae037e8f31a41bf091d65af9f86b2ecd45e099c36698c6095b",
+    "lab3/data/labels/tychy/valid_mask.tif": "3fdf18768a7b7a34ca7fffa4a99c3e34115d529a29b4b79692a1afcdabb78129",
+    "lab3/data/sentinel2/tychy/rgb_reflectance.tif": "2f742fc5151e613a4e89282a431a93fa2c95f621240e8d75de7a487a542d410b"
+  },
+  "versions": {
+    "numpy": "2.5.4",
+    "rasterio": "1.5.2",
+    "pillow": "13.0.0",
+    "matplotlib": "3.11.2",
+    "scipy": "1.18.1"
+  }
+}

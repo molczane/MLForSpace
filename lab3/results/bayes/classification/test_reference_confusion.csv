@@ -1,0 +1,3 @@
+reference_class,predicted_forest,predicted_urban,support
+forest,148,2156,2304
+urban,0,256,256

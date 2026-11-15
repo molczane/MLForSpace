@@ -1,11 +1,13 @@
 # Lab 3 — Bayes and kNN forest–urban classification
 
-**Phases 1–2 are complete** in [analysis.ipynb](analysis.ipynb), with saved outputs.
+**Phases 1–3 are complete** in [analysis.ipynb](analysis.ipynb), with saved outputs.
 The notebook verifies the imagery, shows labelled ROIs and enlarged reference
 chips, saves reproducible training samples, and fits training-only feature
 scaling. It also fits full Gaussian class PDFs, plots their marginals against
-training histograms, and explains the fit limitations. Phases 3–6 remain pending;
-pixel classification and test metrics have not yet been run.
+training histograms, and applies a scratch Bayes classifier to Tychy. The maps
+and reserved references show poor forest transfer (148/2,304 correct forest
+pixels); numerical correctness does not imply model accuracy. Phases 4–6
+remain pending.
 See [CHECKLIST.md](CHECKLIST.md) for the next execution phases.
 
 ## Inputs and references
@@ -154,6 +156,66 @@ All **13 code cells** (phases 1–2) passed a fresh-kernel run with saved output
 The three phase-2 scientific figures and written observations were reviewed;
 see [phase2_review.json](results/bayes/phase2_review.json).
 
+## Phase 3 — scratch Bayes decisions and maps
+
+[bayes.py](bayes.py) implements class means/MLE covariances and full Gaussian
+log scores using NumPy. The decision maximizes `log p(z | class) + log prior`
+under equal misclassification costs; the common evidence term cancels.
+Cholesky factors provide log determinants and quadratic terms through solves,
+without matrix inversion or products of marginal PDFs. Exact score ties choose
+the smaller class ID (forest = 0). Parameters, regularization, equal priors
+and training-only scaling remain fixed from phase 2.
+
+All **261,648 valid Tychy pixels** are classified. The georeferenced uint8
+GeoTIFF preserves the original 512 × 512, EPSG:32634, 10 m grid and uses
+**0 = forest, 1 = urban, 255 = nodata**. A separate RGBA PNG displays forest
+in red, urban in blue and invalid pixels transparently. Plots show nodata
+against grey, with dates, legends and matched detail crops.
+
+![Bayes original and prediction](results/bayes/classification/tychy_bayes_comparison.png)
+
+The map contains **10,487 forest**, **251,161 urban** and **496 nodata** pixels.
+Only 4.01% of valid pixels are called forest, despite visually extensive canopy.
+The reserved references give:
+
+| Reference class | Predicted forest | Predicted urban | Support |
+| --- | ---: | ---: | ---: |
+| Forest | 148 | 2,156 | 2,304 |
+| Urban | 0 | 256 | 256 |
+
+Forest reference recall is **6.42%**. The perfect agreement on 256 industrial
+urban pixels applies only to these sparse, visually labelled interiors.
+Both the full map and [detail crops](results/bayes/classification/tychy_bayes_details.png)
+show extensive forest assigned urban. The notebook explains shadow/mixed-pixel
+uncertainty, trees in urban fabric, forced decisions on other land covers and
+the distinction between visual observations and reference-supported errors.
+
+Post-prediction feature summaries show that Tychy's forest has higher mean red
+and blue reflectance than the narrowly distributed Białowieża training sample.
+The forest PDF penalizes that shift strongly; the broader urban PDF wins.
+This supports a transfer problem without identifying its physical causes.
+The model and reference ROIs were not retuned after seeing the result.
+
+Files under `results/bayes/classification/` include:
+
+- `tychy_bayes_classes.tif`, `tychy_bayes_colors.png` and
+  `tychy_bayes_scores.npz`: class IDs, coloured map and finite valid-pixel
+  log scores with row-major pixel indices. Scores are not normalized posteriors.
+- Original/prediction and detail figures, plus the
+  [reference agreement figure](results/bayes/classification/tychy_bayes_reference_agreement.png).
+- [Per-ROI agreement](results/bayes/classification/test_roi_agreement.csv),
+  [reference confusion counts](results/bayes/classification/test_reference_confusion.csv)
+  and [feature shifts](results/bayes/classification/test_reference_feature_summary.csv).
+- [Run metadata](results/bayes/classification/run_metadata.json) and
+  [verification](results/bayes/classification/verification.json): input/output
+  hashes, finite scores, hand-calculated score/tie/unequal-prior checks,
+  independent full-image scoring, batch invariance, raw/scaled decision
+  equivalence, and lossless georeferenced raster/PNG/score readback.
+
+All **19 code cells** (phases 1–3) passed a fresh-kernel run with saved outputs.
+The three classification figures and written observations were reviewed; see
+[phase3_review.json](results/bayes/classification/phase3_review.json).
+
 ## Reproduce completed phases
 
 From the repository root:
@@ -193,8 +255,8 @@ These data do not establish general land-cover accuracy.
 Water, fields and uncertain pixels remain unlabelled for evaluation, although
 later binary classifiers will force forest/urban decisions on every valid
 pixel. Report metrics only against the saved reference labels, with support
-per class. The class PDFs are now fitted from training data only. Bayes prediction,
-kNN and test comparisons belong to phases 3–5; final packaging belongs to phase 6.
+per class. The class PDFs and Bayes map are now available. kNN and common-model
+comparisons belong to phases 4–5; final packaging belongs to phase 6.
 
 Contains modified Copernicus Sentinel data 2025, accessed through Element 84
 Earth Search. Earlier inputs retain their [Lab 1 provenance](../lab1/README.md).

@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "valid_pixels": 261648,
+  "nodata_pixels": 496,
+  "finite_log_scores": true,
+  "hand_calculated_score_and_tie_checks": "passed",
+  "unequal_prior_check": "passed",
+  "full_image_independent_score_check": "passed",
+  "batch_invariance_check": "passed",
+  "raw_scaled_score_jacobian_and_prediction_check": "passed",
+  "lossless_raster_png_score_readback": "passed",
+  "reference_confusion_and_roi_counts": "passed",
+  "output_sha256": {
+    "lab3/results/bayes/classification/run_metadata.json": "dde4cd0d0ed9757db6727591c6162645222acd081fb158d4adddbb5970930f0d",
+    "lab3/results/bayes/classification/test_reference_confusion.csv": "2ec00138c2238559bf8316d76a5086139063405a5c51a02292fdeb8a0b4cbe45",
+    "lab3/results/bayes/classification/test_reference_feature_summary.csv": "d9a3dbeb030b9576d6c78f5075cc81b087306f10fe069aab7aed65f3dfe0577f",
+    "lab3/results/bayes/classification/test_roi_agreement.csv": "357057cedd9d829d9f9adb827b19c3cf3f4c9e7f757f6d83c9edd07759b27fd0",
+    "lab3/results/bayes/classification/tychy_bayes_classes.tif": "12303041b6fcf882f8cb50285321da7b30674612616678f04201633aa7cc805d",
+    "lab3/results/bayes/classification/tychy_bayes_colors.png": "c399c09c656626f2ebc08dd26ce0f4e21a40aa20a087b8c9e4e750d0b10def1a",
+    "lab3/results/bayes/classification/tychy_bayes_comparison.png": "031cef37df534db86084112cb199625601bea7c9befcdb25b24841fdd94b4b27",
+    "lab3/results/bayes/classification/tychy_bayes_details.png": "766f63e27861707aa96703d3ed2da226fe8f5ac3d2e3c0c33201fc327e5cc55d",
+    "lab3/results/bayes/classification/tychy_bayes_reference_agreement.png": "d25142fa1fde5a93e9e32296b0ea51b3bf4f8b2f9ad2dd7308624631987fb5be",
+    "lab3/results/bayes/classification/tychy_bayes_scores.npz": "b0933e07509f10efc2f3de5ccb9036c2cc6b7ed2911a2f1c149ba016ecc8e71a"
+  }
+}

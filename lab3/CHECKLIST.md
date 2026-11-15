@@ -1,8 +1,9 @@
 # Lab 3 — Bayes and kNN completion checklist
 
 Based on the supplied assignment, the previous Lab 2 conversation and the
-current repository. Phases 1–2 are complete; checked items identify verified data and PDF preparation.
-Lab 3 classifiers and classification results have not yet been implemented.
+current repository. Phases 1–3 are complete, with verified inputs, fitted PDFs
+and scratch Bayes maps. Poor forest transfer is documented; kNN and common-model
+comparisons remain pending.
 
 ## Current starting point and decisions
 
@@ -135,22 +136,39 @@ table and saved model/scaling settings under `lab3/results/bayes/`.
 
 ## 3. Implement and apply the Bayes classifier from scratch — required
 
-- [ ] Explain Bayes' rule and the equal-misclassification-cost decision:
+Completed in section 3 of [analysis.ipynb](analysis.ipynb), using
+[bayes.py](bayes.py) and the fixed phase-2 Gaussian/scaling parameters. All
+261,648 valid Tychy pixels are classified; 496 QA-invalid pixels retain nodata.
+[Comparison](results/bayes/classification/tychy_bayes_comparison.png),
+[detail](results/bayes/classification/tychy_bayes_details.png) and
+[reference-agreement](results/bayes/classification/tychy_bayes_reference_agreement.png)
+figures accompany the georeferenced class raster, red/blue PNG and written
+observations. The baseline transfers poorly: only 148/2,304 labelled forest
+pixels are correct, versus 256/256 labelled industrial urban pixels.
+[Verification](results/bayes/classification/verification.json) checks analytical
+scores/ties, unequal priors, independent full-image scores, batch invariance,
+raw/scaled equivalence, masks, georeferencing and lossless exports. Passing
+numerical checks is not a claim of classification accuracy.
+All 19 code cells passed a fresh-kernel run with saved outputs; three new figures
+and written observations were reviewed. See
+[phase3_review.json](results/bayes/classification/phase3_review.json).
+
+- [x] Explain Bayes' rule and the equal-misclassification-cost decision:
   choose the class maximizing `log p(x | c) + log P(c)`; the common evidence
   term `p(x)` cancels when comparing classes.
-- [ ] Write the multivariate Gaussian log-score explicitly, including the
+- [x] Write the multivariate Gaussian log-score explicitly, including the
   covariance determinant and quadratic term. Use a stable solve/factorization
   and log determinant; avoid multiplying tiny PDFs or unnecessary inversion.
-- [ ] Implement fitting and prediction with NumPy primitives. Define a
+- [x] Implement fitting and prediction with NumPy primitives. Define a
   deterministic rule for equal class scores and verify finite model scores.
-- [ ] Pass **every valid pixel** of the new image through the classifier,
+- [x] Pass **every valid pixel** of the new image through the classifier,
   reshape predictions to the original grid and preserve invalid pixels as
   nodata. Label the map clearly: **forest = red, urban = blue**; display
   invalid pixels neutrally or transparently.
-- [ ] Show the original test image, Bayes class map and a useful detail crop
+- [x] Show the original test image, Bayes class map and a useful detail crop
   with a legend and acquisition information. Save a lossless class raster
   with georeferencing and a separate coloured visualization.
-- [ ] Explain the actual observed successes and errors, including shadows,
+- [x] Explain the actual observed successes and errors, including shadows,
   mixed pixels, vegetation within cities and differences between acquisitions.
   Distinguish visual interpretation from reference-label evidence.
 

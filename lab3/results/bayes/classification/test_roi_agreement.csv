@@ -1,0 +1,9 @@
+roi_id,reference_class,support,predicted_forest,predicted_urban,correct
+T-F-t1,forest,576,47,529,47
+T-F-t2,forest,576,5,571,5
+T-F-t3,forest,576,82,494,82
+T-F-t4,forest,576,14,562,14
+T-U-t1,urban,64,0,64,64
+T-U-t2,urban,64,0,64,64
+T-U-t3,urban,64,0,64,64
+T-U-t4,urban,64,0,64,64
