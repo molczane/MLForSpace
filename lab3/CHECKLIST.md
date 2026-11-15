@@ -1,9 +1,9 @@
 # Lab 3 — Bayes and kNN completion checklist
 
 Based on the supplied assignment, the previous Lab 2 conversation and the
-current repository. Phases 1–3 are complete, with verified inputs, fitted PDFs
-and scratch Bayes maps. Poor forest transfer is documented; kNN and common-model
-comparisons remain pending.
+current repository. Phases 1–4 are complete, with verified inputs, fitted PDFs,
+scratch Bayes and kNN maps. Poor Bayes forest transfer and the small kNN changes
+with k are documented. Full model comparison and final submission checks remain pending.
 
 ## Current starting point and decisions
 
@@ -177,24 +177,40 @@ and written interpretation in the main notebook.
 
 ## 4. Implement kNN from scratch and run k = 1, 3, 5 — required
 
-- [ ] Explain the algorithm step by step: store training feature vectors and
+Completed in section 4 of [analysis.ipynb](analysis.ipynb), using
+[knn.py](knn.py) with the exact same 1,024 training rows, scaling and 261,648
+valid Tychy pixels as Bayes. All three georeferenced rasters and red/blue PNGs,
+[comparison](results/knn/tychy_knn_comparison.png),
+[matched details](results/knn/tychy_knn_details.png),
+[change locations](results/knn/tychy_knn_changes.png), neighbour identities,
+reference counts and written observations are saved. Fewer than 1% of valid
+pixels change between any pair of k values.
+[Verification](results/knn/verification.json) covers known distances/votes/ties,
+unsigned overflow, 112 independent scalar exhaustive queries, exact whole-image
+batch invariance, shared masks and lossless georeferenced exports. The high
+reference agreement is explicitly limited to sparse manually labelled interiors.
+All 25 code cells passed a fresh-kernel run with saved outputs; three kNN figures
+and written observations were reviewed. See
+[phase4_review.json](results/knn/phase4_review.json).
+
+- [x] Explain the algorithm step by step: store training feature vectors and
   labels; transform a query pixel with training settings; compute Euclidean
   distances; select the k nearest training samples; predict by majority vote.
-- [ ] Implement distance computation, neighbour selection and voting directly.
+- [x] Implement distance computation, neighbour selection and voting directly.
   Use floating-point features so subtraction/squaring cannot overflow an
   integer image dtype. Require at least five training samples.
-- [ ] Define deterministic handling of equal distances at the kth boundary,
+- [x] Define deterministic handling of equal distances at the kth boundary,
   for example distance followed by saved training index. Odd k avoids a
   two-class vote tie but does not remove equal-distance neighbour ambiguity.
-- [ ] Process query pixels in manageable batches rather than storing the
+- [x] Process query pixels in manageable batches rather than storing the
   full image-by-training distance matrix. Keep the prediction mathematically
   equivalent to exhaustive neighbour search and document the sample size.
-- [ ] Classify the same valid test pixels for **k = 1, 3 and 5**, holding the
+- [x] Classify the same valid test pixels for **k = 1, 3 and 5**, holding the
   training set, feature transformation, distance metric and masks fixed.
-- [ ] Save all three class rasters and visualizations with the same
+- [x] Save all three class rasters and visualizations with the same
   red/blue legend and nodata treatment as Bayes. Show original, k = 1,
   k = 3 and k = 5 side by side, plus matched enlarged details.
-- [ ] Explain that neighbours are selected in spectral feature space.
+- [x] Explain that neighbours are selected in spectral feature space.
   Increasing k does not directly apply a spatial smoothing filter.
 
 Completion evidence: readable algorithm explanation, scratch implementation,

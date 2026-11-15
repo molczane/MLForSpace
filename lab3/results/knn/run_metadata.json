@@ -1,0 +1,166 @@
+{
+  "phase": 4,
+  "source": "tychy",
+  "scene_id": "S2C_T34UCA_20250814T095058_L2A",
+  "acquisition_utc": "2025-08-14T09:57:04.138000Z",
+  "band_order": [
+    "B04",
+    "B03",
+    "B02"
+  ],
+  "training_samples": 1024,
+  "per_class": [
+    512,
+    512
+  ],
+  "seed": 20261115,
+  "feature_scaling": "unchanged training mean/std from phase 1",
+  "k_values": [
+    1,
+    3,
+    5
+  ],
+  "metric": "Euclidean (squared for ranking)",
+  "search": "exhaustive across all saved training rows",
+  "distance_dtype": "float64",
+  "batch_size": 512,
+  "distance_matrix_bytes_per_full_batch": 4194304,
+  "distance_tie_rule": "exact distance then ascending saved training row index; stable sort; no tolerance",
+  "vote": "unweighted majority; predict urban iff urban count > k//2",
+  "retained_neighbors": 6,
+  "valid_pixels": 261648,
+  "nodata_pixels": 496,
+  "map_counts": [
+    {
+      "k": 1,
+      "forest": 157128,
+      "urban": 104520,
+      "nodata": 496,
+      "exact_distance_boundary_ties": 0
+    },
+    {
+      "k": 3,
+      "forest": 158625,
+      "urban": 103023,
+      "nodata": 496,
+      "exact_distance_boundary_ties": 0
+    },
+    {
+      "k": 5,
+      "forest": 157928,
+      "urban": 103720,
+      "nodata": 496,
+      "exact_distance_boundary_ties": 0
+    }
+  ],
+  "reference_counts": [
+    {
+      "k": 1,
+      "reference_class": "forest",
+      "support": 2304,
+      "predicted_forest": 2289,
+      "predicted_urban": 15,
+      "correct": 2289
+    },
+    {
+      "k": 1,
+      "reference_class": "urban",
+      "support": 256,
+      "predicted_forest": 0,
+      "predicted_urban": 256,
+      "correct": 256
+    },
+    {
+      "k": 3,
+      "reference_class": "forest",
+      "support": 2304,
+      "predicted_forest": 2289,
+      "predicted_urban": 15,
+      "correct": 2289
+    },
+    {
+      "k": 3,
+      "reference_class": "urban",
+      "support": 256,
+      "predicted_forest": 0,
+      "predicted_urban": 256,
+      "correct": 256
+    },
+    {
+      "k": 5,
+      "reference_class": "forest",
+      "support": 2304,
+      "predicted_forest": 2288,
+      "predicted_urban": 16,
+      "correct": 2288
+    },
+    {
+      "k": 5,
+      "reference_class": "urban",
+      "support": 256,
+      "predicted_forest": 0,
+      "predicted_urban": 256,
+      "correct": 256
+    }
+  ],
+  "k_changes": [
+    {
+      "k_from": 1,
+      "k_to": 3,
+      "valid_pixels": 261648,
+      "changed_pixels": 2143,
+      "changed_percent": 0.8190393200024462,
+      "forest_to_urban": 323,
+      "urban_to_forest": 1820
+    },
+    {
+      "k_from": 3,
+      "k_to": 5,
+      "valid_pixels": 261648,
+      "changed_pixels": 781,
+      "changed_percent": 0.2984926313214701,
+      "forest_to_urban": 739,
+      "urban_to_forest": 42
+    },
+    {
+      "k_from": 1,
+      "k_to": 5,
+      "valid_pixels": 261648,
+      "changed_pixels": 1916,
+      "changed_percent": 0.7322815385556167,
+      "forest_to_urban": 558,
+      "urban_to_forest": 1358
+    }
+  ],
+  "detail_boxes_xyxy": {
+    "Industrial–canopy boundary": [
+      310,
+      215,
+      410,
+      315
+    ],
+    "Housing, trees and forest edge": [
+      0,
+      0,
+      180,
+      180
+    ]
+  },
+  "reference_used_to_tune_model": false,
+  "input_hashes": {
+    "lab3/knn.py": "086a616c07cc2dd989acd528e1204bb00c7ed1e7eafe08fd043eb6559c40d48f",
+    "lab3/data/training_samples.npz": "0f8a0ebe5310ef654c12a8954c6b6c1856933bd458143d6a90b57bb646d30ce3",
+    "lab3/data/scaling.json": "884b66550a3f7a8c672d49ec105159a44fc1513d6af67abfdbf2dea49733ec6d",
+    "lab3/data/manifest.json": "0788ce0dcfb0a8e047d6d7175a3d38be9c8c72db3821d5f4f0ae5f58b2f92a81",
+    "lab3/data/labels/tychy/test_labels.tif": "3cd12a56ec6ed0ae037e8f31a41bf091d65af9f86b2ecd45e099c36698c6095b",
+    "lab3/data/labels/tychy/valid_mask.tif": "3fdf18768a7b7a34ca7fffa4a99c3e34115d529a29b4b79692a1afcdabb78129",
+    "lab3/data/sentinel2/tychy/rgb_reflectance.tif": "2f742fc5151e613a4e89282a431a93fa2c95f621240e8d75de7a487a542d410b"
+  },
+  "versions": {
+    "numpy": "2.5.4",
+    "rasterio": "1.5.2",
+    "pillow": "13.0.0",
+    "matplotlib": "3.11.2",
+    "scipy": "1.18.1"
+  }
+}

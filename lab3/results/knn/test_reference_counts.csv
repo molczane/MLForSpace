@@ -1,0 +1,7 @@
+k,reference_class,support,predicted_forest,predicted_urban,correct
+1,forest,2304,2289,15,2289
+1,urban,256,0,256,256
+3,forest,2304,2289,15,2289
+3,urban,256,0,256,256
+5,forest,2304,2288,16,2288
+5,urban,256,0,256,256

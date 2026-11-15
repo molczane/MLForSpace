@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "valid_pixels": 261648,
+  "k_values": [
+    1,
+    3,
+    5
+  ],
+  "hand_calculated_tied_neighbors_votes": "passed",
+  "unsigned_overflow_case": "passed",
+  "independent_scalar_exhaustive_queries": 112,
+  "full_image_batch_invariance": "passed (512 versus 127)",
+  "shared_training_scaling_and_masks": "passed",
+  "lossless_raster_png_neighbor_readback": "passed",
+  "csv_counts_and_reference_support": "passed",
+  "finite_nonnegative_squared_distances": true,
+  "output_sha256": {
+    "lab3/results/knn/k_change_counts.csv": "7ffc1c9e7bc1545c418e6d8f74d72c9f6e5331f172e495f661efa789525c4e9b",
+    "lab3/results/knn/map_counts_and_ties.csv": "1697f515b56208d28c4a9e5dac9ac64c184d7fcb9836d3225e1aac83084e4e6d",
+    "lab3/results/knn/nearest_training_rows.npz": "f6376d67ec2651991f14c5dacf004e5476f6db672bd1c94a39bc18c4bcd1fd11",
+    "lab3/results/knn/run_metadata.json": "672e4f2c7594ed955a962c3a80b4dbd5ac7a68f5d412481065b22abf2b4a632c",
+    "lab3/results/knn/test_reference_counts.csv": "8d139232c022077cfecc06886f2636e762524f68d79e93fa9551e690bd7a94df",
+    "lab3/results/knn/tychy_knn_changes.png": "d6d52c7cb57697bfc7b61908835c9206ceb67e3859fd37f1fd2765a16b599beb",
+    "lab3/results/knn/tychy_knn_comparison.png": "5fdb31d48a4dc5af94a103a85c71446c83d986847e4959d5671516b5b767ee6b",
+    "lab3/results/knn/tychy_knn_details.png": "da84dd05320b3a28cba4b0290bc2c8e571623f752f5249456523c56086c39849",
+    "lab3/results/knn/tychy_knn_k1_classes.tif": "7d91d2d81945a34e7ffa93d91c766ebebc1efbaa97e6ab5059236abb7e6dacbf",
+    "lab3/results/knn/tychy_knn_k1_colors.png": "0d9efbd03c1daa3422dbde17d04d296862329a600afa10a5dce4dbb7b0e1c158",
+    "lab3/results/knn/tychy_knn_k3_classes.tif": "af979282085063d776bbc4c0df475d1857eee9a168065ba6c556a7a3fc48b0e1",
+    "lab3/results/knn/tychy_knn_k3_colors.png": "4a98fa20ca97919031878390adec86f96d76e2042c1be18220e4239684fefc7c",
+    "lab3/results/knn/tychy_knn_k5_classes.tif": "90761e376f090289bbd94ef67a6740c73bb487ba093ca4bb045aaf002e329fc6",
+    "lab3/results/knn/tychy_knn_k5_colors.png": "21df7b4beab221d39f32d8dcfab16c58ff0812e8961923489c283607c2b2937d"
+  }
+}

@@ -3,8 +3,9 @@
 - **Lab 3:** [analysis notebook](lab3/analysis.ipynb),
   [data and reproduction instructions](lab3/README.md), and
   [execution checklist](lab3/CHECKLIST.md). Labelled training data, an independent
-  test image, fitted Gaussian PDFs and scratch Bayes maps are prepared,
-  with poor forest transfer documented. kNN and model comparison are pending.
+  test image, fitted Gaussian PDFs, scratch Bayes and kNN (k = 1, 3, 5) maps
+  are prepared, with observations and verification. Full model comparison
+  and final submission checks are pending.
 - **Lab 2:** [executed analysis notebook](lab2/analysis.ipynb),
   [results and reproduction instructions](lab2/README.md), and
   [submission review](lab2/SUBMISSION_REVIEW.md). Covers Sentinel-1/2

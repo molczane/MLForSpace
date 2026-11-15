@@ -1,13 +1,15 @@
 # Lab 3 — Bayes and kNN forest–urban classification
 
-**Phases 1–3 are complete** in [analysis.ipynb](analysis.ipynb), with saved outputs.
+**Phases 1–4 are complete** in [analysis.ipynb](analysis.ipynb), with saved outputs.
 The notebook verifies the imagery, shows labelled ROIs and enlarged reference
 chips, saves reproducible training samples, and fits training-only feature
 scaling. It also fits full Gaussian class PDFs, plots their marginals against
 training histograms, and applies a scratch Bayes classifier to Tychy. The maps
 and reserved references show poor forest transfer (148/2,304 correct forest
-pixels); numerical correctness does not imply model accuracy. Phases 4–6
-remain pending.
+pixels); numerical correctness does not imply model accuracy. Scratch kNN maps
+for k = 1, 3 and 5 use the same inputs and have much higher agreement on these
+sparse references. Full model comparison and final submission checks (phases
+5–6) remain pending.
 See [CHECKLIST.md](CHECKLIST.md) for the next execution phases.
 
 ## Inputs and references
@@ -216,6 +218,67 @@ All **19 code cells** (phases 1–3) passed a fresh-kernel run with saved output
 The three classification figures and written observations were reviewed; see
 [phase3_review.json](results/bayes/classification/phase3_review.json).
 
+## Phase 4 — scratch kNN for k = 1, 3 and 5
+
+[knn.py](knn.py) implements exhaustive squared Euclidean distances, stable
+neighbour selection and unweighted binary majority voting with NumPy. It uses
+the same 1,024 saved standardized training rows and every valid Tychy query
+pixel as Bayes. Exact equal distances are ordered by saved training row index;
+there is no approximate tie tolerance. All distances use float64 differences,
+preventing unsigned integer overflow. The three k values share one neighbour
+ranking and fixed training-only scaling.
+
+The calculation processes 512 queries at a time: each distance matrix is
+512 × 1,024, or 4 MiB, rather than a roughly 2 GiB full-image matrix. Sorting,
+temporary arrays and saved outputs add memory. The six nearest training rows
+and squared distances are retained to audit the boundary at all three k values.
+Neighbours are selected spectrally, not spatially; increasing k is not an image
+smoothing operation.
+
+![Original and three kNN maps](results/knn/tychy_knn_comparison.png)
+
+| k | Forest map pixels | Urban map pixels | Correct forest reference | Correct urban reference |
+| --- | ---: | ---: | ---: | ---: |
+| 1 | 157,128 | 104,520 | 2,289 / 2,304 | 256 / 256 |
+| 3 | 158,625 | 103,023 | 2,289 / 2,304 | 256 / 256 |
+| 5 | 157,928 | 103,720 | 2,288 / 2,304 | 256 / 256 |
+
+All three maps preserve **496 nodata pixels**, use forest red / urban blue and
+retain the source georeferencing. Forest reference agreement is **99.35%** for
+k = 1 and 3, **99.31%** for k = 5. The sparse, manually labelled references
+emphasize clear canopy and industrial urban interiors; they are not a full-image
+accuracy assessment.
+
+Changing k = 1 → 3 changes **2,143 valid pixels (0.819%)**; 3 → 5 changes
+**781 (0.298%)**; 1 → 5 changes **1,916 (0.732%)**. The overall maps and matched
+details remain similar. Increasing k first expands and then slightly reduces
+forest extent, without a monotonic reference improvement. The notebook records
+these small differences rather than claiming uniform spatial smoothing or a
+generally optimal k. There are no exact kth-boundary distance ties on this
+image; synthetic tied-neighbour cases verify the deterministic rule.
+
+Outputs under `results/knn/` include:
+
+- `tychy_knn_k{1,3,5}_classes.tif` and corresponding `_colors.png`: lossless
+  georeferenced uint8 labels and red/blue/transparent visualizations.
+- Original-plus-three-map comparison, [matched details](results/knn/tychy_knn_details.png)
+  and [change locations](results/knn/tychy_knn_changes.png).
+- `nearest_training_rows.npz`: six ordered training-row indices and squared
+  distances for each valid query; source/pixel identities remain tied to the
+  saved phase-1 sample order.
+- [Map/tie counts](results/knn/map_counts_and_ties.csv),
+  [reference counts](results/knn/test_reference_counts.csv),
+  [k changes](results/knn/k_change_counts.csv), and
+  [run metadata](results/knn/run_metadata.json).
+- [Verification](results/knn/verification.json): hand-computed tied neighbours
+  and votes, uint8 overflow prevention, independent scalar exhaustive rankings
+  on 112 query pixels, exact whole-image batch invariance (512 versus 127),
+  shared inputs/masks and lossless map/PNG/neighbour readback.
+
+All **25 code cells** (phases 1–4) passed a fresh-kernel run with saved outputs.
+Three kNN figures and written observations were reviewed; see
+[phase4_review.json](results/knn/phase4_review.json).
+
 ## Reproduce completed phases
 
 From the repository root:
@@ -255,8 +318,8 @@ These data do not establish general land-cover accuracy.
 Water, fields and uncertain pixels remain unlabelled for evaluation, although
 later binary classifiers will force forest/urban decisions on every valid
 pixel. Report metrics only against the saved reference labels, with support
-per class. The class PDFs and Bayes map are now available. kNN and common-model
-comparisons belong to phases 4–5; final packaging belongs to phase 6.
+per class. The class PDFs, Bayes and three kNN maps are now available.
+Full common-model comparisons belong to phase 5; final packaging belongs to phase 6.
 
 Contains modified Copernicus Sentinel data 2025, accessed through Element 84
 Earth Search. Earlier inputs retain their [Lab 1 provenance](../lab1/README.md).
