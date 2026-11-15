@@ -1,0 +1,59 @@
+{
+  "phase": 1,
+  "notebook": "lab3/analysis.ipynb",
+  "review_method": "IDE fresh-kernel Run All plus saved source and ROI image inspection",
+  "status": "passed",
+  "code_cells": [
+    {
+      "id": "6dd3d7df7417cc8",
+      "status": "STOPPED_OK",
+      "execution_count": 1
+    },
+    {
+      "id": "35e6cc3a2ad13bec",
+      "status": "STOPPED_OK",
+      "execution_count": 2
+    },
+    {
+      "id": "8d196aeab8d4e7a9",
+      "status": "STOPPED_OK",
+      "execution_count": 3
+    },
+    {
+      "id": "203452e93c843a6d",
+      "status": "STOPPED_OK",
+      "execution_count": 4
+    },
+    {
+      "id": "97aad276a19f58af",
+      "status": "STOPPED_OK",
+      "execution_count": 5
+    },
+    {
+      "id": "b8266f2a94b8d654",
+      "status": "STOPPED_OK",
+      "execution_count": 6
+    },
+    {
+      "id": "df47d99d4b49125d",
+      "status": "STOPPED_OK",
+      "execution_count": 7
+    }
+  ],
+  "figures_reviewed": [
+    "data/labelled_overview.png",
+    "data/krakow_roi_chips.png",
+    "data/bialowieza_roi_chips.png",
+    "data/tychy_roi_chips.png"
+  ],
+  "visual_findings": "Forest ROIs are in canopy interiors away from river/clearings. Urban proposals containing substantial courtyard vegetation were rejected/trimmed before fitting any model. Final urban patches contain built fabric and industrial structures; residual subpixel mixing and label uncertainty remain possible.",
+  "reference_definition": "Assistant visual annotations; not independently field verified. Tychy references are sparse and urban references emphasize industrial surfaces.",
+  "verification": "data/verification.json",
+  "remaining_phases": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "bands": [
+    "B04",
+    "B03",
+    "B02"
+  ],
+  "units_before_scaling": "dimensionless BOA reflectance",
+  "fit_on": "exact saved 1024 training samples only",
+  "ddof": 0,
+  "mean": [
+    0.055381245161697734,
+    0.06279999465914443,
+    0.048840717907296494
+  ],
+  "raw_std": [
+    0.04798551703957921,
+    0.040115891014799995,
+    0.04238928955126377
+  ],
+  "scale": [
+    0.04798551703957921,
+    0.040115891014799995,
+    0.04238928955126377
+  ],
+  "zero_std_rule": "replace exactly zero standard deviation with 1",
+  "apply": "(X_raw - mean) / scale; same parameters for every image"
+}

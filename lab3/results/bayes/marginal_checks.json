@@ -1,0 +1,44 @@
+[
+  {
+    "class_name": "forest",
+    "band": "B04",
+    "integral_10sigma": 1.0,
+    "gaussian_mass_below_observed_min": 0.0028247147043314155,
+    "gaussian_mass_above_observed_max": 2.8281287883773717e-07
+  },
+  {
+    "class_name": "forest",
+    "band": "B03",
+    "integral_10sigma": 1.0,
+    "gaussian_mass_below_observed_min": 0.005228572607811764,
+    "gaussian_mass_above_observed_max": 0.00015797373863767658
+  },
+  {
+    "class_name": "forest",
+    "band": "B02",
+    "integral_10sigma": 1.0,
+    "gaussian_mass_below_observed_min": 0.0010494049023298238,
+    "gaussian_mass_above_observed_max": 0.00014402669055794775
+  },
+  {
+    "class_name": "urban",
+    "band": "B04",
+    "integral_10sigma": 1.0,
+    "gaussian_mass_below_observed_min": 0.04379368638574811,
+    "gaussian_mass_above_observed_max": 9.779535716705523e-05
+  },
+  {
+    "class_name": "urban",
+    "band": "B03",
+    "integral_10sigma": 1.0,
+    "gaussian_mass_below_observed_min": 0.06277577235761109,
+    "gaussian_mass_above_observed_max": 0.00021343059730102024
+  },
+  {
+    "class_name": "urban",
+    "band": "B02",
+    "integral_10sigma": 1.0,
+    "gaussian_mass_below_observed_min": 0.05437985159387395,
+    "gaussian_mass_above_observed_max": 0.0005103919694634159
+  }
+]

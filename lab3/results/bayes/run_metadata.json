@@ -1,0 +1,32 @@
+{
+  "phase": 2,
+  "training_samples": 1024,
+  "per_class": 512,
+  "seed": 20261115,
+  "input_hashes": {
+    "lab3/data/training_samples.npz": "0f8a0ebe5310ef654c12a8954c6b6c1856933bd458143d6a90b57bb646d30ce3",
+    "lab3/data/scaling.json": "884b66550a3f7a8c672d49ec105159a44fc1513d6af67abfdbf2dea49733ec6d",
+    "lab3/data/manifest.json": "0788ce0dcfb0a8e047d6d7175a3d38be9c8c72db3821d5f4f0ae5f58b2f92a81",
+    "lab3/rois.json": "e78f2e37ae167a3790c3beb79e4d9a2948bea25a4d4e58c2469fd232c4d7c661"
+  },
+  "histogram_bins_shared_per_band": 64,
+  "forest_detail_bins_per_band": 24,
+  "histogram_normalization": "counts / (N_class * bin_width); every sample included",
+  "plot_axes": "raw reflectance; common class axes per band; forest-only detail has separate axes/bins",
+  "log_density_display_floor": 0.01,
+  "regularization_scaled": 1e-06,
+  "sensitivity_epsilons": [
+    0.0,
+    1e-08,
+    1e-06,
+    0.0001
+  ],
+  "holdout_and_test_used_for_fit": false,
+  "versions": {
+    "numpy": "2.5.4",
+    "rasterio": "1.5.2",
+    "pillow": "13.0.0",
+    "matplotlib": "3.11.2",
+    "scipy": "1.18.1"
+  }
+}

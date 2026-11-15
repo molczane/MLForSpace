@@ -1,0 +1,718 @@
+{
+  "phase": 1,
+  "bands": [
+    "B04",
+    "B03",
+    "B02"
+  ],
+  "label_encoding": {
+    "0": "forest",
+    "1": "urban",
+    "255": "ignored/unlabelled"
+  },
+  "seed": 20261115,
+  "training_samples_per_class": 512,
+  "source_id_order": [
+    "krakow",
+    "bialowieza"
+  ],
+  "buffer_pixels": 16,
+  "buffer_m": 160,
+  "roi_counts": [
+    {
+      "id": "K-U-t1",
+      "source": "krakow",
+      "split": "train",
+      "label": 1,
+      "box_xyxy": [
+        228,
+        232,
+        240,
+        244
+      ],
+      "reason": "Compact dense built-up block interior, away from parks and river.",
+      "valid_pixels": 144,
+      "excluded_qa_pixels": 0
+    },
+    {
+      "id": "K-U-t2",
+      "source": "krakow",
+      "split": "train",
+      "label": 1,
+      "box_xyxy": [
+        244,
+        228,
+        256,
+        240
+      ],
+      "reason": "Compact dense built-up block interior, away from parks and river.",
+      "valid_pixels": 144,
+      "excluded_qa_pixels": 0
+    },
+    {
+      "id": "K-U-t3",
+      "source": "krakow",
+      "split": "train",
+      "label": 1,
+      "box_xyxy": [
+        260,
+        236,
+        272,
+        248
+      ],
+      "reason": "Compact dense built-up block interior, away from parks and river.",
+      "valid_pixels": 144,
+      "excluded_qa_pixels": 0
+    },
+    {
+      "id": "K-U-t4",
+      "source": "krakow",
+      "split": "train",
+      "label": 1,
+      "box_xyxy": [
+        284,
+        239,
+        290,
+        251
+      ],
+      "reason": "Compact dense built-up block interior, away from parks and river.",
+      "valid_pixels": 72,
+      "excluded_qa_pixels": 0
+    },
+    {
+      "id": "K-U-t5",
+      "source": "krakow",
+      "split": "train",
+      "label": 1,
+      "box_xyxy": [
+        264,
+        218,
+        276,
+        230
+      ],
+      "reason": "Compact dense built-up block interior, away from parks and river.",
+      "valid_pixels": 144,
+      "excluded_qa_pixels": 0
+    },
+    {
+      "id": "K-U-h1",
+      "source": "krakow",
+      "split": "holdout",
+      "label": 1,
+      "box_xyxy": [
+        300,
+        360,
+        312,
+        372
+      ],
+      "reason": "Compact dense built-up block interior, away from parks and river.",
+      "valid_pixels": 144,
+      "excluded_qa_pixels": 0
+    },
+    {
+      "id": "K-U-h2",
+      "source": "krakow",
+      "split": "holdout",
+      "label": 1,
+      "box_xyxy": [
+        274,
+        388,
+        280,
+        394
+      ],
+      "reason": "Compact dense built-up block interior, away from parks and river.",
+      "valid_pixels": 36,
+      "excluded_qa_pixels": 0
+    },
+    {
+      "id": "K-U-h3",
+      "source": "krakow",
+      "split": "holdout",
+      "label": 1,
+      "box_xyxy": [
+        320,
+        446,
+        332,
+        452
+      ],
+      "reason": "Compact dense built-up block interior, away from parks and river.",
+      "valid_pixels": 72,
+      "excluded_qa_pixels": 0
+    },
+    {
+      "id": "B-F-t1",
+      "source": "bialowieza",
+      "split": "train",
+      "label": 0,
+      "box_xyxy": [
+        210,
+        60,
+        234,
+        84
+      ],
+      "reason": "Compact canopy interior, away from clearings and river.",
+      "valid_pixels": 576,
+      "excluded_qa_pixels": 0
+    },
+    {
+      "id": "B-F-t2",
+      "source": "bialowieza",
+      "split": "train",
+      "label": 0,
+      "box_xyxy": [
+        280,
+        95,
+        304,
+        119
+      ],
+      "reason": "Compact canopy interior, away from clearings and river.",
+      "valid_pixels": 576,
+      "excluded_qa_pixels": 0
+    },
+    {
+      "id": "B-F-t3",
+      "source": "bialowieza",
+      "split": "train",
+      "label": 0,
+      "box_xyxy": [
+        350,
+        180,
+        374,
+        204
+      ],
+      "reason": "Compact canopy interior, away from clearings and river.",
+      "valid_pixels": 576,
+      "excluded_qa_pixels": 0
+    },
+    {
+      "id": "B-F-t4",
+      "source": "bialowieza",
+      "split": "train",
+      "label": 0,
+      "box_xyxy": [
+        215,
+        255,
+        239,
+        279
+      ],
+      "reason": "Compact canopy interior, away from clearings and river.",
+      "valid_pixels": 576,
+      "excluded_qa_pixels": 0
+    },
+    {
+      "id": "B-F-h1",
+      "source": "bialowieza",
+      "split": "holdout",
+      "label": 0,
+      "box_xyxy": [
+        340,
+        350,
+        364,
+        374
+      ],
+      "reason": "Compact canopy interior, away from clearings and river.",
+      "valid_pixels": 576,
+      "excluded_qa_pixels": 0
+    },
+    {
+      "id": "B-F-h2",
+      "source": "bialowieza",
+      "split": "holdout",
+      "label": 0,
+      "box_xyxy": [
+        210,
+        400,
+        234,
+        424
+      ],
+      "reason": "Compact canopy interior, away from clearings and river.",
+      "valid_pixels": 576,
+      "excluded_qa_pixels": 0
+    },
+    {
+      "id": "B-F-h3",
+      "source": "bialowieza",
+      "split": "holdout",
+      "label": 0,
+      "box_xyxy": [
+        410,
+        280,
+        434,
+        304
+      ],
+      "reason": "Compact canopy interior, away from clearings and river.",
+      "valid_pixels": 576,
+      "excluded_qa_pixels": 0
+    },
+    {
+      "id": "T-F-t1",
+      "source": "tychy",
+      "split": "test",
+      "label": 0,
+      "box_xyxy": [
+        160,
+        80,
+        184,
+        104
+      ],
+      "reason": "Compact canopy interior, away from clearings and river.",
+      "valid_pixels": 576,
+      "excluded_qa_pixels": 0
+    },
+    {
+      "id": "T-F-t2",
+      "source": "tychy",
+      "split": "test",
+      "label": 0,
+      "box_xyxy": [
+        225,
+        138,
+        249,
+        162
+      ],
+      "reason": "Compact canopy interior, away from clearings and river.",
+      "valid_pixels": 576,
+      "excluded_qa_pixels": 0
+    },
+    {
+      "id": "T-F-t3",
+      "source": "tychy",
+      "split": "test",
+      "label": 0,
+      "box_xyxy": [
+        70,
+        250,
+        94,
+        274
+      ],
+      "reason": "Compact canopy interior, away from clearings and river.",
+      "valid_pixels": 576,
+      "excluded_qa_pixels": 0
+    },
+    {
+      "id": "T-F-t4",
+      "source": "tychy",
+      "split": "test",
+      "label": 0,
+      "box_xyxy": [
+        430,
+        350,
+        454,
+        374
+      ],
+      "reason": "Compact canopy interior, away from clearings and river.",
+      "valid_pixels": 576,
+      "excluded_qa_pixels": 0
+    },
+    {
+      "id": "T-U-t1",
+      "source": "tychy",
+      "split": "test",
+      "label": 1,
+      "box_xyxy": [
+        366,
+        57,
+        374,
+        65
+      ],
+      "reason": "Compact industrial roof/structure interior.",
+      "valid_pixels": 64,
+      "excluded_qa_pixels": 0
+    },
+    {
+      "id": "T-U-t2",
+      "source": "tychy",
+      "split": "test",
+      "label": 1,
+      "box_xyxy": [
+        378,
+        76,
+        386,
+        84
+      ],
+      "reason": "Compact industrial roof/structure interior.",
+      "valid_pixels": 64,
+      "excluded_qa_pixels": 0
+    },
+    {
+      "id": "T-U-t3",
+      "source": "tychy",
+      "split": "test",
+      "label": 1,
+      "box_xyxy": [
+        354,
+        269,
+        362,
+        277
+      ],
+      "reason": "Compact industrial roof/structure interior.",
+      "valid_pixels": 64,
+      "excluded_qa_pixels": 0
+    },
+    {
+      "id": "T-U-t4",
+      "source": "tychy",
+      "split": "test",
+      "label": 1,
+      "box_xyxy": [
+        330,
+        261,
+        338,
+        269
+      ],
+      "reason": "Compact industrial roof/structure interior.",
+      "valid_pixels": 64,
+      "excluded_qa_pixels": 0
+    }
+  ],
+  "scaling": {
+    "bands": [
+      "B04",
+      "B03",
+      "B02"
+    ],
+    "units_before_scaling": "dimensionless BOA reflectance",
+    "fit_on": "exact saved 1024 training samples only",
+    "ddof": 0,
+    "mean": [
+      0.055381245161697734,
+      0.06279999465914443,
+      0.048840717907296494
+    ],
+    "raw_std": [
+      0.04798551703957921,
+      0.040115891014799995,
+      0.04238928955126377
+    ],
+    "scale": [
+      0.04798551703957921,
+      0.040115891014799995,
+      0.04238928955126377
+    ],
+    "zero_std_rule": "replace exactly zero standard deviation with 1",
+    "apply": "(X_raw - mean) / scale; same parameters for every image"
+  },
+  "sources": {
+    "krakow": {
+      "scene_id": "S2A_T34UDA_20250813T094043_L2A",
+      "acquired_utc": "2025-08-13T09:46:56.167000Z",
+      "crs": "EPSG:32634",
+      "bounds": [
+        421440.0,
+        5543440.0,
+        426560.0,
+        5548560.0
+      ],
+      "transform": [
+        10.0,
+        0.0,
+        421440.0,
+        0.0,
+        -10.0,
+        5548560.0
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              19.902942015809465,
+              50.03806988603085
+            ],
+            [
+              19.974428149907844,
+              50.038723644763536
+            ],
+            [
+              19.973445991352676,
+              50.084765314181
+            ],
+            [
+              19.901891429610203,
+              50.084110494243895
+            ],
+            [
+              19.902942015809465,
+              50.03806988603085
+            ]
+          ]
+        ]
+      },
+      "shape": [
+        512,
+        512
+      ],
+      "pixel_spacing_m": [
+        10,
+        10
+      ],
+      "valid_pixels": 262064,
+      "conversions": {
+        "red": {
+          "scale": 0.0001,
+          "effective_offset": -0.1,
+          "catalogue_offset": -0.1
+        },
+        "green": {
+          "scale": 0.0001,
+          "effective_offset": -0.1,
+          "catalogue_offset": -0.1
+        },
+        "blue": {
+          "scale": 0.0001,
+          "effective_offset": -0.1,
+          "catalogue_offset": -0.1
+        }
+      },
+      "paths": {
+        "rgb_dn.tif": "lab1/data/sentinel2/krakow/rgb_dn.tif",
+        "rgb_reflectance.tif": "lab1/data/sentinel2/krakow/rgb_reflectance.tif",
+        "rgb.png": "lab1/data/sentinel2/krakow/rgb.png",
+        "scl.tif": "lab1/data/sentinel2/krakow/scl.tif",
+        "metadata.json": "lab1/data/sentinel2/krakow/metadata.json",
+        "source_item.json": "lab1/data/sentinel2/krakow/source_item.json"
+      },
+      "counts": {
+        "train": {
+          "forest": 0,
+          "urban": 648
+        },
+        "holdout": {
+          "forest": 0,
+          "urban": 252
+        },
+        "test": {
+          "forest": 0,
+          "urban": 0
+        }
+      }
+    },
+    "bialowieza": {
+      "scene_id": "S2C_T34UFD_20250702T094053_L2A",
+      "acquired_utc": "2025-07-02T09:46:14.474000Z",
+      "crs": "EPSG:32634",
+      "bounds": [
+        688750.0,
+        5846230.0,
+        693870.0,
+        5851350.0
+      ],
+      "transform": [
+        10.0,
+        0.0,
+        688750.0,
+        0.0,
+        -10.0,
+        5851350.0
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              23.795609416569448,
+              52.73295040686567
+            ],
+            [
+              23.871340275236918,
+              52.73113968090796
+            ],
+            [
+              23.874366989728983,
+              52.77710958159274
+            ],
+            [
+              23.798556559664515,
+              52.77892330670257
+            ],
+            [
+              23.795609416569448,
+              52.73295040686567
+            ]
+          ]
+        ]
+      },
+      "shape": [
+        512,
+        512
+      ],
+      "pixel_spacing_m": [
+        10,
+        10
+      ],
+      "valid_pixels": 262144,
+      "conversions": {
+        "red": {
+          "scale": 0.0001,
+          "effective_offset": -0.1,
+          "catalogue_offset": -0.1
+        },
+        "green": {
+          "scale": 0.0001,
+          "effective_offset": -0.1,
+          "catalogue_offset": -0.1
+        },
+        "blue": {
+          "scale": 0.0001,
+          "effective_offset": -0.1,
+          "catalogue_offset": -0.1
+        }
+      },
+      "paths": {
+        "rgb_dn.tif": "lab1/data/sentinel2/bialowieza/rgb_dn.tif",
+        "rgb_reflectance.tif": "lab1/data/sentinel2/bialowieza/rgb_reflectance.tif",
+        "rgb.png": "lab1/data/sentinel2/bialowieza/rgb.png",
+        "scl.tif": "lab1/data/sentinel2/bialowieza/scl.tif",
+        "metadata.json": "lab1/data/sentinel2/bialowieza/metadata.json",
+        "source_item.json": "lab1/data/sentinel2/bialowieza/source_item.json"
+      },
+      "counts": {
+        "train": {
+          "forest": 2304,
+          "urban": 0
+        },
+        "holdout": {
+          "forest": 1728,
+          "urban": 0
+        },
+        "test": {
+          "forest": 0,
+          "urban": 0
+        }
+      }
+    },
+    "tychy": {
+      "scene_id": "S2C_T34UCA_20250814T095058_L2A",
+      "acquired_utc": "2025-08-14T09:57:04.138000Z",
+      "crs": "EPSG:32634",
+      "bounds": [
+        354580.0,
+        5555780.0,
+        359700.0,
+        5560900.0
+      ],
+      "transform": [
+        10.0,
+        0.0,
+        354580.0,
+        0.0,
+        -10.0,
+        5560900.0
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.96505607036472,
+              50.13640880903682
+            ],
+            [
+              19.036657705618538,
+              50.13764183433236
+            ],
+            [
+              19.034771140907505,
+              50.18366301810311
+            ],
+            [
+              18.96310081791818,
+              50.18242799096945
+            ],
+            [
+              18.96505607036472,
+              50.13640880903682
+            ]
+          ]
+        ]
+      },
+      "shape": [
+        512,
+        512
+      ],
+      "pixel_spacing_m": [
+        10,
+        10
+      ],
+      "valid_pixels": 261648,
+      "conversions": {
+        "red": {
+          "scale": 0.0001,
+          "effective_offset": -0.1,
+          "catalogue_offset": -0.1
+        },
+        "green": {
+          "scale": 0.0001,
+          "effective_offset": -0.1,
+          "catalogue_offset": -0.1
+        },
+        "blue": {
+          "scale": 0.0001,
+          "effective_offset": -0.1,
+          "catalogue_offset": -0.1
+        }
+      },
+      "paths": {
+        "rgb_dn.tif": "lab3/data/sentinel2/tychy/rgb_dn.tif",
+        "rgb_reflectance.tif": "lab3/data/sentinel2/tychy/rgb_reflectance.tif",
+        "rgb.png": "lab3/data/sentinel2/tychy/rgb.png",
+        "scl.tif": "lab3/data/sentinel2/tychy/scl.tif",
+        "metadata.json": "lab3/data/sentinel2/tychy/metadata.json",
+        "source_item.json": "lab3/data/sentinel2/tychy/source_item.json"
+      },
+      "counts": {
+        "train": {
+          "forest": 0,
+          "urban": 0
+        },
+        "holdout": {
+          "forest": 0,
+          "urban": 0
+        },
+        "test": {
+          "forest": 2304,
+          "urban": 256
+        }
+      }
+    }
+  },
+  "sha256": {
+    "lab1/data/sentinel2/bialowieza/grayscale.png": "c6b1743a4c9644f099aa40fee7faf6705326181f88248341229986cacbe0980c",
+    "lab1/data/sentinel2/bialowieza/metadata.json": "7835aec8701644820ab5907333d0bf13d11d2758602360b3a90d83bd084e2377",
+    "lab1/data/sentinel2/bialowieza/rgb.png": "8d836554b8ceb9e909ebde65ae9b38d8496f4afc7cceccbd0e4bfca4523ddfec",
+    "lab1/data/sentinel2/bialowieza/rgb_dn.tif": "8ffab5fc75959ce49646b137ca4335599ba7f1a43b57f4aaa6b86535bfeb30a8",
+    "lab1/data/sentinel2/bialowieza/rgb_reflectance.tif": "cfa44ee6de1bc87a447ae94db83486a31791172d947d2c37b61752bd2976b17c",
+    "lab1/data/sentinel2/bialowieza/scl.tif": "058a59a750dae92788525c1c37b5534d38f2562759a82d2b78c598736bb55b58",
+    "lab1/data/sentinel2/bialowieza/source_item.json": "d0e39763697d6bb7d2c7344db57b60a0318c6b5a816ce64ade42969a6a6c7210",
+    "lab1/data/sentinel2/krakow/grayscale.png": "434d712694fef83a62806d383fdebe73a3a46fc7142dc3c30d7cd3fc62087da3",
+    "lab1/data/sentinel2/krakow/metadata.json": "03e3a5a79d9952eeb78f3acb5b6cf3635118a9288be7b1828f5fadf472663804",
+    "lab1/data/sentinel2/krakow/rgb.png": "c454e5a5b490cfe03b6075821ce33c079d866f1704f599b6a1e1651f895641b7",
+    "lab1/data/sentinel2/krakow/rgb_dn.tif": "f3cbc5438866d2cb26ef2e228eee727e002d3e66712ab270bfe0f6b74cd1bb31",
+    "lab1/data/sentinel2/krakow/rgb_reflectance.tif": "5b28cbe49472aac947c5bca3bb8fdfbd4ecd285dcbc250d65a087233f7283845",
+    "lab1/data/sentinel2/krakow/scl.tif": "754e14fa8acd0431bfa1096b4d69e4c58d8645f780ebe06dc9f021494b82f571",
+    "lab1/data/sentinel2/krakow/source_item.json": "de4e1ff8e4aef60356082240a9f714a171c0ecbbca18d891bf3efc267e6767bf",
+    "lab2/data/manifest.json": "2d54c9c08101e92db1ee1dbddcf45f408001c5451c064421654c77b217e8e7c5",
+    "lab2/data/sentinel2/bialowieza/valid_mask.tif": "b77b4267fdf099a822a1873659fac96684ba4374890ecee49a9738c772cc8ad0",
+    "lab2/data/sentinel2/krakow/valid_mask.tif": "336844b4164a884ef2ac5f4e9666fb10f47a54777aa769bbaa6e7b6ae79894a3",
+    "lab3/data/labels/bialowieza/holdout_labels.tif": "67d3c43ed97d0171857591a84f80fe7b2cee313595a0d803895cc2be62411c73",
+    "lab3/data/labels/bialowieza/train_labels.tif": "fb5b91ebd36b5ca174e8406d65b7447601f0f79c9e4ba10a52349bbedc290b7b",
+    "lab3/data/labels/bialowieza/valid_mask.tif": "b30e826186c5334b6fffbdaf646b382c6b0c31ab62b113c62eb25fcc56d7ca37",
+    "lab3/data/labels/krakow/holdout_labels.tif": "9e8837f2c987c73f0be14ab6ced686fa079c6b9de0c244dfb6a926652d281b0e",
+    "lab3/data/labels/krakow/train_labels.tif": "c4ba9a1ab3d28e0a20c01c4ee5cfd499e250b7ebf2372976cbe20fe1a14d1939",
+    "lab3/data/labels/krakow/valid_mask.tif": "cac781d6fe8e7feb8f9962527ad654de92189a9e383c565c94d3616dac9afe71",
+    "lab3/data/labels/tychy/test_labels.tif": "3cd12a56ec6ed0ae037e8f31a41bf091d65af9f86b2ecd45e099c36698c6095b",
+    "lab3/data/labels/tychy/valid_mask.tif": "3fdf18768a7b7a34ca7fffa4a99c3e34115d529a29b4b79692a1afcdabb78129",
+    "lab3/data/scaling.json": "884b66550a3f7a8c672d49ec105159a44fc1513d6af67abfdbf2dea49733ec6d",
+    "lab3/data/sentinel2/tychy/grayscale.png": "0d35187c390d7b659cac46628247d28eee9402fdf4d332db2f2df2ece8b13b22",
+    "lab3/data/sentinel2/tychy/metadata.json": "fd7c6b32b2ce6ac047808b021eb4d608dc1d06e74d99942482666c86db78023f",
+    "lab3/data/sentinel2/tychy/rgb.png": "6c30dd30175b07199f946bd391d5deececed70bfb924e9bf164be22f1d5924f2",
+    "lab3/data/sentinel2/tychy/rgb_dn.tif": "328c667f140943ce5b56b065742b77cbd637da2b65cf472338b386ccd3d6a867",
+    "lab3/data/sentinel2/tychy/rgb_reflectance.tif": "2f742fc5151e613a4e89282a431a93fa2c95f621240e8d75de7a487a542d410b",
+    "lab3/data/sentinel2/tychy/scl.tif": "6420944c0b16f4c6fb7915f8bbe63e73640b2f1a2eec9dc79d01e433b0ca4a0d",
+    "lab3/data/sentinel2/tychy/source_item.json": "096e6a19265e8d6ae1a6ac9b25767b3f7a4aa8d7fadcb9c856a3957ac76401e7",
+    "lab3/data/training_samples.npz": "0f8a0ebe5310ef654c12a8954c6b6c1856933bd458143d6a90b57bb646d30ce3",
+    "lab3/inputs.py": "687c6abd7e9d1b8b47f6759e7159990f93d270bbe3576c44f46390acc0320f91",
+    "lab3/rois.json": "e78f2e37ae167a3790c3beb79e4d9a2948bea25a4d4e58c2469fd232c4d7c661",
+    "lab3/test_aoi.json": "ab2f4ac54410466c57a724c5ef53e100dc6db838d6142bc95219817a5dddec8f"
+  }
+}

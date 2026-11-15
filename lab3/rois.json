@@ -1,0 +1,321 @@
+{
+  "schema_version": 1,
+  "annotation_author": "Codex assistant, manual visual interpretation of fixed-map Sentinel-2 RGB; not field verified",
+  "annotation_method": "Select compact interiors before fitting any classifier; inspect source context and nearest-neighbour enlarged pixel chips. No SCL class or classifier prediction is used as a land-cover label.",
+  "coordinate_convention": "zero-based [x0,y0,x1,y1], upper bounds exclusive; rows increase southward",
+  "class_definitions": {
+    "0": "Closed-canopy forest interiors; exclude clearings, fields, river corridors and uncertain edges.",
+    "1": "Continuous built-up impervious urban fabric: roofs, paved streets/courtyards and industrial structures. Exclude substantial vegetation, fields, water and uncertain edges.",
+    "255": "Unlabelled or uncertain; no reference claim."
+  },
+  "seed": 20261115,
+  "training_samples_per_class": 512,
+  "train_holdout_buffer_pixels": 16,
+  "limitations": [
+    "Visual labels at 10 m are approximate; subpixel mixing and small trees/shadows remain possible.",
+    "Training forest comes from Białowieża and urban from Kraków; class, geography and acquisition conditions are confounded.",
+    "The Tychy test references emphasize clear forest and impervious/industrial interiors; they are sparse and not a representative citywide survey."
+  ],
+  "rois": [
+    {
+      "id": "K-U-t1",
+      "source": "krakow",
+      "split": "train",
+      "label": 1,
+      "box_xyxy": [
+        228,
+        232,
+        240,
+        244
+      ],
+      "reason": "Compact dense built-up block interior, away from parks and river."
+    },
+    {
+      "id": "K-U-t2",
+      "source": "krakow",
+      "split": "train",
+      "label": 1,
+      "box_xyxy": [
+        244,
+        228,
+        256,
+        240
+      ],
+      "reason": "Compact dense built-up block interior, away from parks and river."
+    },
+    {
+      "id": "K-U-t3",
+      "source": "krakow",
+      "split": "train",
+      "label": 1,
+      "box_xyxy": [
+        260,
+        236,
+        272,
+        248
+      ],
+      "reason": "Compact dense built-up block interior, away from parks and river."
+    },
+    {
+      "id": "K-U-t4",
+      "source": "krakow",
+      "split": "train",
+      "label": 1,
+      "box_xyxy": [
+        284,
+        239,
+        290,
+        251
+      ],
+      "reason": "Compact dense built-up block interior, away from parks and river."
+    },
+    {
+      "id": "K-U-t5",
+      "source": "krakow",
+      "split": "train",
+      "label": 1,
+      "box_xyxy": [
+        264,
+        218,
+        276,
+        230
+      ],
+      "reason": "Compact dense built-up block interior, away from parks and river."
+    },
+    {
+      "id": "K-U-h1",
+      "source": "krakow",
+      "split": "holdout",
+      "label": 1,
+      "box_xyxy": [
+        300,
+        360,
+        312,
+        372
+      ],
+      "reason": "Compact dense built-up block interior, away from parks and river."
+    },
+    {
+      "id": "K-U-h2",
+      "source": "krakow",
+      "split": "holdout",
+      "label": 1,
+      "box_xyxy": [
+        274,
+        388,
+        280,
+        394
+      ],
+      "reason": "Compact dense built-up block interior, away from parks and river."
+    },
+    {
+      "id": "K-U-h3",
+      "source": "krakow",
+      "split": "holdout",
+      "label": 1,
+      "box_xyxy": [
+        320,
+        446,
+        332,
+        452
+      ],
+      "reason": "Compact dense built-up block interior, away from parks and river."
+    },
+    {
+      "id": "B-F-t1",
+      "source": "bialowieza",
+      "split": "train",
+      "label": 0,
+      "box_xyxy": [
+        210,
+        60,
+        234,
+        84
+      ],
+      "reason": "Compact canopy interior, away from clearings and river."
+    },
+    {
+      "id": "B-F-t2",
+      "source": "bialowieza",
+      "split": "train",
+      "label": 0,
+      "box_xyxy": [
+        280,
+        95,
+        304,
+        119
+      ],
+      "reason": "Compact canopy interior, away from clearings and river."
+    },
+    {
+      "id": "B-F-t3",
+      "source": "bialowieza",
+      "split": "train",
+      "label": 0,
+      "box_xyxy": [
+        350,
+        180,
+        374,
+        204
+      ],
+      "reason": "Compact canopy interior, away from clearings and river."
+    },
+    {
+      "id": "B-F-t4",
+      "source": "bialowieza",
+      "split": "train",
+      "label": 0,
+      "box_xyxy": [
+        215,
+        255,
+        239,
+        279
+      ],
+      "reason": "Compact canopy interior, away from clearings and river."
+    },
+    {
+      "id": "B-F-h1",
+      "source": "bialowieza",
+      "split": "holdout",
+      "label": 0,
+      "box_xyxy": [
+        340,
+        350,
+        364,
+        374
+      ],
+      "reason": "Compact canopy interior, away from clearings and river."
+    },
+    {
+      "id": "B-F-h2",
+      "source": "bialowieza",
+      "split": "holdout",
+      "label": 0,
+      "box_xyxy": [
+        210,
+        400,
+        234,
+        424
+      ],
+      "reason": "Compact canopy interior, away from clearings and river."
+    },
+    {
+      "id": "B-F-h3",
+      "source": "bialowieza",
+      "split": "holdout",
+      "label": 0,
+      "box_xyxy": [
+        410,
+        280,
+        434,
+        304
+      ],
+      "reason": "Compact canopy interior, away from clearings and river."
+    },
+    {
+      "id": "T-F-t1",
+      "source": "tychy",
+      "split": "test",
+      "label": 0,
+      "box_xyxy": [
+        160,
+        80,
+        184,
+        104
+      ],
+      "reason": "Compact canopy interior, away from clearings and river."
+    },
+    {
+      "id": "T-F-t2",
+      "source": "tychy",
+      "split": "test",
+      "label": 0,
+      "box_xyxy": [
+        225,
+        138,
+        249,
+        162
+      ],
+      "reason": "Compact canopy interior, away from clearings and river."
+    },
+    {
+      "id": "T-F-t3",
+      "source": "tychy",
+      "split": "test",
+      "label": 0,
+      "box_xyxy": [
+        70,
+        250,
+        94,
+        274
+      ],
+      "reason": "Compact canopy interior, away from clearings and river."
+    },
+    {
+      "id": "T-F-t4",
+      "source": "tychy",
+      "split": "test",
+      "label": 0,
+      "box_xyxy": [
+        430,
+        350,
+        454,
+        374
+      ],
+      "reason": "Compact canopy interior, away from clearings and river."
+    },
+    {
+      "id": "T-U-t1",
+      "source": "tychy",
+      "split": "test",
+      "label": 1,
+      "box_xyxy": [
+        366,
+        57,
+        374,
+        65
+      ],
+      "reason": "Compact industrial roof/structure interior."
+    },
+    {
+      "id": "T-U-t2",
+      "source": "tychy",
+      "split": "test",
+      "label": 1,
+      "box_xyxy": [
+        378,
+        76,
+        386,
+        84
+      ],
+      "reason": "Compact industrial roof/structure interior."
+    },
+    {
+      "id": "T-U-t3",
+      "source": "tychy",
+      "split": "test",
+      "label": 1,
+      "box_xyxy": [
+        354,
+        269,
+        362,
+        277
+      ],
+      "reason": "Compact industrial roof/structure interior."
+    },
+    {
+      "id": "T-U-t4",
+      "source": "tychy",
+      "split": "test",
+      "label": 1,
+      "box_xyxy": [
+        330,
+        261,
+        338,
+        269
+      ],
+      "reason": "Compact industrial roof/structure interior."
+    }
+  ],
+  "visual_review_notes": "Initial enlarged-chip review rejected a green courtyard training ROI, trimmed another courtyard edge, and restricted two urban holdouts to built surfaces. Final coordinates were selected without classifier outputs."
+}

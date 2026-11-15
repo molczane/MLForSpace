@@ -1,0 +1,96 @@
+{
+  "phase": 2,
+  "status": "passed",
+  "notebook": "lab3/analysis.ipynb",
+  "execution_method": "IDE fresh-kernel Run All",
+  "total_code_cells": 13,
+  "phase2_code_cells": 6,
+  "cells": [
+    {
+      "id": "6dd3d7df7417cc8",
+      "status": "STOPPED_OK",
+      "execution_count": 1
+    },
+    {
+      "id": "35e6cc3a2ad13bec",
+      "status": "STOPPED_OK",
+      "execution_count": 2
+    },
+    {
+      "id": "8d196aeab8d4e7a9",
+      "status": "STOPPED_OK",
+      "execution_count": 3
+    },
+    {
+      "id": "203452e93c843a6d",
+      "status": "STOPPED_OK",
+      "execution_count": 4
+    },
+    {
+      "id": "97aad276a19f58af",
+      "status": "STOPPED_OK",
+      "execution_count": 5
+    },
+    {
+      "id": "b8266f2a94b8d654",
+      "status": "STOPPED_OK",
+      "execution_count": 6
+    },
+    {
+      "id": "df47d99d4b49125d",
+      "status": "STOPPED_OK",
+      "execution_count": 7
+    },
+    {
+      "id": "5919582dd1ff04cc",
+      "status": "STOPPED_OK",
+      "execution_count": 8
+    },
+    {
+      "id": "fc783f3262ce78a2",
+      "status": "STOPPED_OK",
+      "execution_count": 9
+    },
+    {
+      "id": "9f1490158b6d4cf0",
+      "status": "STOPPED_OK",
+      "execution_count": 10
+    },
+    {
+      "id": "11b357c557e75d64",
+      "status": "STOPPED_OK",
+      "execution_count": 11
+    },
+    {
+      "id": "bbfb22b393a9644b",
+      "status": "STOPPED_OK",
+      "execution_count": 12
+    },
+    {
+      "id": "1e88a90b785be84a",
+      "status": "STOPPED_OK",
+      "execution_count": 13
+    }
+  ],
+  "scientific_figures_reviewed": [
+    "results/bayes/histograms_and_marginal_pdfs.png",
+    "results/bayes/forest_marginal_detail.png",
+    "results/bayes/band_correlations.png"
+  ],
+  "written_observations_reviewed": [
+    "class means, spread and band differences",
+    "bin-dependent overlap and generalization limits",
+    "skewness, tails and Gaussian fit mismatch",
+    "joint covariance versus marginal plots",
+    "regularization units and sensitivity",
+    "equal priors and train/test separation"
+  ],
+  "numerical_verification": "results/bayes/verification.json",
+  "remaining_phases": [
+    3,
+    4,
+    5,
+    6
+  ],
+  "classification_evaluated": false
+}

@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "input_and_output_hashes": 37,
+  "training_samples": 1024,
+  "per_class": [
+    512,
+    512
+  ],
+  "feature_count": 3,
+  "seed": 20261115,
+  "spatial_buffer_pixels": 16,
+  "independent_test": "tychy; nonoverlapping footprint and distinct scene ID",
+  "versions": {
+    "numpy": "2.5.4",
+    "rasterio": "1.5.2",
+    "pillow": "13.0.0",
+    "matplotlib": "3.11.2",
+    "scipy": "1.18.1"
+  },
+  "saved_input_audit_network_disabled": true
+}

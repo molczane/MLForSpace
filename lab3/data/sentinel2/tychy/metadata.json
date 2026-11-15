@@ -1,0 +1,117 @@
+{
+  "aoi": {
+    "id": "tychy",
+    "name": "Tychy forest–urban boundary",
+    "terrain": "mixed forest and built-up",
+    "longitude": 19.0,
+    "latitude": 50.16
+  },
+  "scene_id": "S2C_T34UCA_20250814T095058_L2A",
+  "acquired_utc": "2025-08-14T09:57:04.138000Z",
+  "retrieved_utc": "2026-11-15T15:34:14.233366+00:00",
+  "configuration": {
+    "catalogue": "https://earth-search.aws.element84.com/v1",
+    "collection": "sentinel-2-c1-l2a",
+    "datetime": "2025-08-01T00:00:00Z/2025-08-31T23:59:59Z",
+    "size_pixels": 512,
+    "resolution_m": 10,
+    "max_scene_cloud_percent": 10,
+    "max_aoi_bad_fraction": 0.0025,
+    "display_reflectance_max": 0.3,
+    "display_gamma": 2.2,
+    "aois": [
+      {
+        "id": "tychy",
+        "name": "Tychy forest–urban boundary",
+        "terrain": "mixed forest and built-up",
+        "longitude": 19.0,
+        "latitude": 50.16
+      }
+    ]
+  },
+  "crs": "EPSG:32634",
+  "bounds": [
+    354580.0,
+    5555780.0,
+    359700.0,
+    5560900.0
+  ],
+  "transform": [
+    10.0,
+    0.0,
+    354580.0,
+    0.0,
+    -10.0,
+    5560900.0
+  ],
+  "window": {
+    "col": 5458,
+    "row": 3914,
+    "size": 512
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          18.96505607036472,
+          50.13640880903682
+        ],
+        [
+          19.036657705618538,
+          50.13764183433236
+        ],
+        [
+          19.034771140907505,
+          50.18366301810311
+        ],
+        [
+          18.96310081791818,
+          50.18242799096945
+        ],
+        [
+          18.96505607036472,
+          50.13640880903682
+        ]
+      ]
+    ]
+  },
+  "aoi_bad_fraction": 0.00189208984375,
+  "scl_fractions": {
+    "2": 0.000396728515625,
+    "4": 0.8924713134765625,
+    "5": 0.1025390625,
+    "6": 0.0027008056640625,
+    "7": 0.00189208984375
+  },
+  "conversions": {
+    "red": {
+      "scale": 0.0001,
+      "effective_offset": -0.1,
+      "catalogue_offset": -0.1
+    },
+    "green": {
+      "scale": 0.0001,
+      "effective_offset": -0.1,
+      "catalogue_offset": -0.1
+    },
+    "blue": {
+      "scale": 0.0001,
+      "effective_offset": -0.1,
+      "catalogue_offset": -0.1
+    }
+  },
+  "attempts": [
+    {
+      "scene": "S2C_T34UCA_20250814T095058_L2A",
+      "bad_fraction": 0.00189208984375
+    }
+  ],
+  "sha256": {
+    "rgb.png": "6c30dd30175b07199f946bd391d5deececed70bfb924e9bf164be22f1d5924f2",
+    "rgb_dn.tif": "328c667f140943ce5b56b065742b77cbd637da2b65cf472338b386ccd3d6a867",
+    "grayscale.png": "0d35187c390d7b659cac46628247d28eee9402fdf4d332db2f2df2ece8b13b22",
+    "scl.tif": "6420944c0b16f4c6fb7915f8bbe63e73640b2f1a2eec9dc79d01e433b0ca4a0d",
+    "rgb_reflectance.tif": "2f742fc5151e613a4e89282a431a93fa2c95f621240e8d75de7a487a542d410b"
+  }
+}

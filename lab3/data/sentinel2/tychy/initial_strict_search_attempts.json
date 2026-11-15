@@ -1,0 +1,42 @@
+[
+  {
+    "scene": "S2B_T33UYR_20250630T095030_L2A",
+    "bad_fraction": 0.001220703125
+  },
+  {
+    "scene": "S2C_T34UCA_20250814T095058_L2A",
+    "bad_fraction": 0.00189208984375
+  },
+  {
+    "scene": "S2C_T33UYR_20250814T095058_L2A",
+    "bad_fraction": 0.001922607421875
+  },
+  {
+    "scene": "S2C_T34UCA_20250615T095047_L2A",
+    "bad_fraction": 0.0013885498046875
+  },
+  {
+    "scene": "S2C_T33UYR_20250615T095047_L2A",
+    "bad_fraction": 0.0014190673828125
+  },
+  {
+    "scene": "S2B_T34UCA_20250630T095030_L2A",
+    "bad_fraction": 0.0011138916015625
+  },
+  {
+    "scene": "S2C_T34UCA_20250705T095217_L2A",
+    "bad_fraction": 0.0010986328125
+  },
+  {
+    "scene": "S2C_T33UYR_20250705T095217_L2A",
+    "bad_fraction": 0.0012054443359375
+  },
+  {
+    "scene": "S2A_T33UYR_20250826T095042_L2A",
+    "bad_fraction": 0.1287994384765625
+  },
+  {
+    "scene": "S2C_T34UCA_20250605T095638_L2A",
+    "bad_fraction": 0.002227783203125
+  }
+]
